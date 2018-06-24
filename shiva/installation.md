@@ -28,7 +28,7 @@ To install vcpkg follow the instructions on the following github:
 
 ### Submodules:
 
-`git submodule add` [`https://github.com/milerius/shiva`](https://github.com/milerius/shiva)
+`git submodule add [https://github.com/milerius/shiva](https://github.com/milerius/shiva)`
 
 
 
