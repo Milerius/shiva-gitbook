@@ -2,7 +2,7 @@
 
 | Name | Description  | Dependancies  | Header-Only  | Plugins | Script  | Authors  | Contributors  |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| shiva::dll  |   |   |   |   |   |   |   |
+| shiva::dll  | Contains utilities for handling dll's (plugins)  |   |   |   |   |   |   |
 | shiva::ecs  |   |   |   |   |   |   |   |
 | shiva::entt  |   |   |   |   |   |   |   |
 | shiva::enums  |   |   |   |   |   |   |   |
