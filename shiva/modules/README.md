@@ -15,6 +15,6 @@
 | shiva::reflection |  |  |     ✅ |     ❌ |    ❌ |  |  |
 | shiva::stacktrace |  |  |     ✅ |     ❌ |    ❌ |  |  |
 | shiva::system-sfml-graphics |  |  |     ❌ |     ✅ |    ❌ |  |  |
-| shiva::timer |  |  |     ✅ |  |  |  |  |
-| shiva::world |  |  |     ✅ |  |  |  |  |
+| shiva::timer |  |  |     ✅ |     ❌ |    ❌ |  |  |
+| shiva::world |  |  |     ✅ |     ❌ |    ❌ |  |  |
 
