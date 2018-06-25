@@ -8,9 +8,11 @@ Welcome to the documentation of the **shiva** c++ engine
 
 It is based on an architecture of modules that can be used separately or together.
 
+{% center %} This **will be** centered. {% endcenter %}
+
 ## Project Status:
 
-| {% center %} **Categories** {% endcenter %} | Badge Status |
+| Categories | Badge Status |
 | :---: | :---: |
 | Coverage | [![Coverage Status](https://coveralls.io/repos/github/Milerius/shiva/badge.svg?branch=HEAD)](https://coveralls.io/github/Milerius/shiva?branch=HEAD) |
 | AppVeyor Windows | [![Build status](https://ci.appveyor.com/api/projects/status/krqog6tiv34kk0gd?svg=true)](https://ci.appveyor.com/project/Milerius/shiva) |
