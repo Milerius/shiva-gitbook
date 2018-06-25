@@ -8,8 +8,6 @@ Welcome to the documentation of the **shiva** c++ engine
 
 It is based on an architecture of modules that can be used separately or together.
 
-<div class="ba-center"><p>This <strong>will be</strong> centered.</p></div>
-
 ## Project Status:
 
 | Categories | Badge Status |
