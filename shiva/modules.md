@@ -2,7 +2,7 @@
 
 | Name | Description | Dependancies | Header-Only | Plugins | Script | Authors | Contributors |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| shiva::dll | Contains utilities for handling dll's \(plugins\) |  |  |  |  |  |  |
+| shiva::dll | Contains utilities for handling dll's \(plugins\) | [Boost.DLL](https://github.com/boostorg/dll)[Boost.Filesystem](https://github.com/boostorg/filesystem) |  |  |  |  |  |
 | shiva::ecs | Implementation of the design pattern: [ECS](https://en.wikipedia.org/wiki/Entity%E2%80%93component%E2%80%93system) |  |  |  |  |  |  |
 | shiva::entt | Module that just use aliases on the [EnTT](https://github.com/skypjack/entt) library for coding style |  |  |  |  |  |  |
 | shiva::enums |  |  |  |  |  |  |  |
