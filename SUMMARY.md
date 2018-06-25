@@ -10,4 +10,5 @@
     * [shiva::reflection](shiva/modules/shiva-reflection.md)
     * [shiva::range](shiva/modules/shiva-range.md)
     * [shiva::event](shiva/modules/shiva-event.md)
+    * [shiva::enums](shiva/modules/shiva-enums.md)
 
