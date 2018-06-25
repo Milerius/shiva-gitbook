@@ -9,12 +9,12 @@
 | [shiva::error](shiva-error.md) | General error handler | [shiva::stacktrace](http://confluence.slyris.eu/display/SHIV/shiva%3A%3Astacktrace) [shiva::filesystem](http://confluence.slyris.eu/display/SHIV/shiva%3A%3Afilesystem) [shiva::entt](http://confluence.slyris.eu/display/SHIV/shiva%3A%3Aentt) [expected](https://github.com/TartanLlama/expected) | ✅ | ❌ | ❌ |  |  |
 | [shiva::event](shiva-event.md) | Module that contains the common events of shiva |              ⛔ | ✅ | ❌ | ❌ |  |  |
 | [shiva::filesystem](shiva-filesystem.md) | Module that use the preprocessor to choose the right version of filesystem for c++ |              ⛔ | ✅ | ❌ | ❌ |  |  |
-| [shiva::meta](shiva-meta.md) | Metaprogramming utilities |  | ✅ | ❌ | ❌ |  |  |
+| [shiva::meta](shiva-meta.md) | Metaprogramming utilities | [shiva::pp](http://confluence.slyris.eu/display/SHIV/shiva%3A%3App) | ✅ | ❌ | ❌ |  |  |
 | [shiva::pp](shiva-pp.md) | Preprocessor helpers |              ⛔ | ✅ | ❌ | ❌ |  |  |
-| [shiva::range](shiva-range.md) | Module that just use aliases on the [NanoRange](https://github.com/tcbrindle/NanoRange) library for coding style |  | ✅ | ❌ | ❌ |  |  |
-| [shiva::reflection](shiva-reflection.md) | Module that allows to make the compile-time reflection. |  | ✅ | ❌ | ❌ |  |  |
-| [shiva::stacktrace](shiva-stacktrace.md) | Module that just use aliases on the [Boost.Stacktrace](https://github.com/boostorg/stacktrace) library for coding style |  | ✅ | ❌ | ❌ |  |  |
-| [shiva::system-sfml-graphics](shiva-sfml/shiva-system-sfml-graphics.md) | A rendering system plugin that uses [SFML](https://www.sfml-dev.org/index-fr.php) |  | ❌ | ✅ | ❌ |  |  |
+| [shiva::range](shiva-range.md) | Module that just use aliases on the [NanoRange](https://github.com/tcbrindle/NanoRange) library for coding style | [NanoRange](https://github.com/tcbrindle/NanoRange) | ✅ | ❌ | ❌ |  |  |
+| [shiva::reflection](shiva-reflection.md) | Module that allows to make the compile-time reflection. | [shiva::pp](http://confluence.slyris.eu/display/SHIV/shiva%3A%3App)[shiva::meta](http://confluence.slyris.eu/display/SHIV/shiva%3A%3Ameta) | ✅ | ❌ | ❌ |  |  |
+| [shiva::stacktrace](shiva-stacktrace.md) | Module that just use aliases on the [Boost.Stacktrace](https://github.com/boostorg/stacktrace) library for coding style | [Boost.Stacktrace](https://github.com/boostorg/stacktrace) | ✅ | ❌ | ❌ |  |  |
+| [shiva::system-sfml-graphics](shiva-sfml/shiva-system-sfml-graphics.md) | A rendering system plugin that uses [SFML](https://www.sfml-dev.org/index-fr.php) | [shiva::ecs](http://confluence.slyris.eu/display/SHIV/shiva%3A%3Aecs)[SFML](https://www.sfml-dev.org/index-fr.php) | ❌ | ✅ | ❌ |  |  |
 | [shiva::timer](shiva-timer.md) | Module that facilitates the manipulation of time in C++ |              ⛔ | ✅ | ❌ | ❌ |  |  |
-| [shiva::world](shiva-world.md) | Module that contains all that is needed to create a game world. |  | ✅ | ❌ | ❌ |  |  |
+| [shiva::world](shiva-world.md) | Module that contains all that is needed to create a game world. | [shiva::ecs](http://confluence.slyris.eu/display/SHIV/shiva%3A%3Aecs) | ✅ | ❌ | ❌ |  |  |
 
