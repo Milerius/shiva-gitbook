@@ -14,7 +14,7 @@
 | [shiva::range](shiva-range.md) |  |  |      ✅ |      ❌ |    ❌ |  |  |
 | [shiva::reflection](shiva-reflection.md) |  |  |      ✅ |      ❌ |    ❌ |  |  |
 | [shiva::stacktrace](shiva-stacktrace.md) |  |  |      ✅ |      ❌ |    ❌ |  |  |
-| shiva::system-sfml-graphics |  |  |      ❌ |      ✅ |    ❌ |  |  |
+| [shiva::system-sfml-graphics](shiva-sfml/shiva-system-sfml-graphics.md) |  |  |      ❌ |      ✅ |    ❌ |  |  |
 | [shiva::timer](shiva-timer.md) |  |  |      ✅ |      ❌ |    ❌ |  |  |
 | [shiva::world](shiva-world.md) |  |  |      ✅ |      ❌ |    ❌ |  |  |
 
