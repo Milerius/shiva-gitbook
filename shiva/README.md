@@ -10,12 +10,6 @@ It is based on an architecture of modules that can be used separately or togethe
 
 ## Project Status:
 
-| Categories | Badge Status |
-| --- | --- | --- | --- |
-| Coverage | [![Coverage Status](https://coveralls.io/repos/github/Milerius/shiva/badge.svg?branch=HEAD)](https://coveralls.io/github/Milerius/shiva?branch=HEAD)​ |
-| AppVeyor Windows | [![Build status](https://ci.appveyor.com/api/projects/status/krqog6tiv34kk0gd?svg=true)](https://ci.appveyor.com/project/Milerius/shiva) |
-| Jenkins | [![Build Status](http://ci.slyris.eu/job/shiva/badge/icon)](http://ci.slyris.eu/job/shiva/) |
-
 | Categories  | Badge Status |
 |:-:|:-:|
 | Coverage  | [![Coverage Status](https://coveralls.io/repos/github/Milerius/shiva/badge.svg?branch=HEAD)](https://coveralls.io/github/Milerius/shiva?branch=HEAD)  |
