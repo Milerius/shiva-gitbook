@@ -12,9 +12,9 @@
 | [shiva::meta](shiva-meta.md) | Metaprogramming utilities | [shiva::pp](http://confluence.slyris.eu/display/SHIV/shiva%3A%3App) | ✅ | ❌ | ❌ |  |  |
 | [shiva::pp](shiva-pp.md) | Preprocessor helpers |              ⛔ | ✅ | ❌ | ❌ |  |  |
 | [shiva::range](shiva-range.md) | Module that just use aliases on the [NanoRange](https://github.com/tcbrindle/NanoRange) library for coding style | [NanoRange](https://github.com/tcbrindle/NanoRange) | ✅ | ❌ | ❌ |  |  |
-| [shiva::reflection](shiva-reflection.md) | Module that allows to make the compile-time reflection. | [shiva::pp](http://confluence.slyris.eu/display/SHIV/shiva%3A%3App)[shiva::meta](http://confluence.slyris.eu/display/SHIV/shiva%3A%3Ameta) | ✅ | ❌ | ❌ |  |  |
+| [shiva::reflection](shiva-reflection.md) | Module that allows to make the compile-time reflection. | [shiva::pp](http://confluence.slyris.eu/display/SHIV/shiva%3A%3App)<br>[shiva::meta](http://confluence.slyris.eu/display/SHIV/shiva%3A%3Ameta) | ✅ | ❌ | ❌ |  |  |
 | [shiva::stacktrace](shiva-stacktrace.md) | Module that just use aliases on the [Boost.Stacktrace](https://github.com/boostorg/stacktrace) library for coding style | [Boost.Stacktrace](https://github.com/boostorg/stacktrace) | ✅ | ❌ | ❌ |  |  |
-| [shiva::system-sfml-graphics](shiva-sfml/shiva-system-sfml-graphics.md) | A rendering system plugin that uses [SFML](https://www.sfml-dev.org/index-fr.php) | [shiva::ecs](http://confluence.slyris.eu/display/SHIV/shiva%3A%3Aecs)[SFML](https://www.sfml-dev.org/index-fr.php) | ❌ | ✅ | ❌ |  |  |
+| [shiva::system-sfml-graphics](shiva-sfml/shiva-system-sfml-graphics.md) | A rendering system plugin that uses [SFML](https://www.sfml-dev.org/index-fr.php) | [shiva::ecs](http://confluence.slyris.eu/display/SHIV/shiva%3A%3Aecs)<br>[SFML](https://www.sfml-dev.org/index-fr.php) | ❌ | ✅ | ❌ |  |  |
 | [shiva::timer](shiva-timer.md) | Module that facilitates the manipulation of time in C++ |              ⛔ | ✅ | ❌ | ❌ |  |  |
 | [shiva::world](shiva-world.md) | Module that contains all that is needed to create a game world. | [shiva::ecs](http://confluence.slyris.eu/display/SHIV/shiva%3A%3Aecs) | ✅ | ❌ | ❌ |  |  |
 
