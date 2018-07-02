@@ -6,20 +6,18 @@ description: >-
 
 # shiva::dll
 
-## API
+## plugins\_registry:
 
-### plugins\_registry:
-
-**Usage**
+### **Usage**
 
 This class will allow you to store plugin creation symbols through its template _**CreatorSignature**_ parameter.  
 Through this class you will be able to retrieve the number of plugins, apply a functor on each of the symbols \(as creates the plugin for example\).
 
-#### Diagram
+### Diagram
 
 ![](../../.gitbook/assets/plugins_registry.png)
 
-#### plugins\_registry api
+### plugins\_registry api
 
 {% tabs %}
 {% tab title="Class Signature" %}
