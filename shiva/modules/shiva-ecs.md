@@ -57,5 +57,5 @@ This class will manage the **systems** of the entity component system. You will 
 
 ### Diagram
 
-![](../../.gitbook/assets/diagram.png)
+![system\_manager](../../.gitbook/assets/diagram.png)
 
