@@ -74,6 +74,12 @@ explicit system_manager(entt::dispatcher &dispatcher,
                                 entt::entity_registry &registry,
                                 plugins_registry_t &plugins_registry) noexcept;
 ```
+
+#### Parameters
+
+* **entt::dispatcher**  The `dispatcher` will be provided to the system when it is created.
+* **entt::entity\_registry** The `entity_registry` will be provided to the system when it is created.
+* [plugins\_registry](shiva-dll.md#plugins_registry-api) registry of the plugged systems
 {% endtab %}
 
 {% tab title="Functions" %}
