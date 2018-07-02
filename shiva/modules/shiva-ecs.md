@@ -49,6 +49,8 @@ This game loop is based on the gafferon on games tutorial: [Fix your timestep](h
 
 ![game loop](../../.gitbook/assets/code2flow_99b09.png)
 
+![](../../.gitbook/assets/code2flow_3c3ba.png)
+
 ## system\_manager
 
 ### Usage
