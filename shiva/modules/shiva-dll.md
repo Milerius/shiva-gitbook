@@ -6,6 +6,8 @@ description: >-
 
 # shiva::dll
 
+## API
+
 ### plugins\_registry:
 
 **Usage**
