@@ -34,7 +34,7 @@ explicit plugins_registry(shiva::fs::path &&plugins_directory) noexcept;
 bool load_all_symbols() noexcept;
 ```
 
-**Return value**
+#### **Return value**
 
 * `true` if all the symbols of all the libraries have been correctly loaded
 * `false` if a symbol from one of the libraries was not loaded, or if the **plugins\_directory** doesn't exist
@@ -58,6 +58,21 @@ size_t nb_plugins() const noexcept;
 **Return value**
 
 * numbers of plugins
+
+**apply\_on\_each\_symbols**
+
+```cpp
+template <typename Functor>
+void apply_on_each_symbols(Functor &&functor);
+```
+
+**Template parameters**
+
+* **Functor** Represents the functor to apply on each of the loaded symbols.
+
+**Notes**
+
+* This function applies the **functor** as a parameter to each of the symbols that were previously loaded by the load\_all\_symbols function.
 {% endtab %}
 {% endtabs %}
 
