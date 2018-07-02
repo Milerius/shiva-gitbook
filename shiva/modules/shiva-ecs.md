@@ -122,7 +122,7 @@ TSystem &get_system();
 * **TSystem&** Return a reference to the system obtained
 
 {% hint style="danger" %}
-**Throw** a **`std::logic_error`** if the system could not be obtained correctly
+**Throw** a **`std::logic_error`** if the system could not be obtained correctly or if it was never loaded.
 {% endhint %}
 {% endtab %}
 {% endtabs %}
