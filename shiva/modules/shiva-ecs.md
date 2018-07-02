@@ -124,6 +124,16 @@ TSystem &get_system();
 {% hint style="danger" %}
 **Throw** a **`std::logic_error`** if the system could not be obtained correctly or if it was never loaded.
 {% endhint %}
+
+#### get\_systems
+
+```cpp
+template <typename ...Systems>
+std::tuple<std::add_lvalue_reference_t<Systems>...> get_systems();
+
+template <typename ...Systems>
+std::tuple<std::add_lvalue_reference_t<std::add_const_t<Systems>>...> get_systems() const
+```
 {% endtab %}
 {% endtabs %}
 
