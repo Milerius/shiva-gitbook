@@ -109,8 +109,8 @@ If you decide to mark a system, it will be automatically **deleted** at the next
 template <typename TSystem>
 const TSystem &get_system() const;
 
- template <typename TSystem>
- TSystem &get_system();
+template <typename TSystem>
+TSystem &get_system();
 ```
 {% endtab %}
 {% endtabs %}
