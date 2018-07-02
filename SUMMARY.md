@@ -22,4 +22,5 @@
     * [shiva::world](shiva/modules/shiva-world.md)
     * [shiva::sfml](shiva/modules/shiva-sfml/README.md)
       * [shiva::system-sfml-graphics](shiva/modules/shiva-sfml/shiva-system-sfml-graphics.md)
+    * [shiva::pyscripting](shiva/modules/shiva-pyscripting.md)
 
