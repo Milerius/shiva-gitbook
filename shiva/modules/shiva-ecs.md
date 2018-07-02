@@ -4,7 +4,7 @@
 
 ## How works the System
 
-### Game Loop
+### Systems
 
 SFME have 3 differents kinds of systems:
 
