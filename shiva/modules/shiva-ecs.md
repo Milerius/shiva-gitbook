@@ -4,6 +4,8 @@
 
 ## How works the System
 
+### Game Loop
+
 SFME have 3 differents kinds of systems:
 
 *  **PreUpdate**: These systems are the first to be updated in the game loop, they are generally used to retrieve user input, or manage network events for example.
@@ -45,5 +47,5 @@ This game loop is based on the gafferon on games tutorial: [Fix your timestep](h
 
 ### Diagram
 
-![game\_loop\_logic](../../.gitbook/assets/code2flow_bc749.png)
+![game\_loop diagram](../../.gitbook/assets/code2flow_bc749.png)
 
