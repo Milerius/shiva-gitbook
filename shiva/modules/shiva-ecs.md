@@ -55,3 +55,7 @@ This game loop is based on the gafferon on games tutorial: [Fix your timestep](h
 
 This class will manage the **systems** of the entity component system. You will be able to `add`, `remove`, `retrieve` , `update` or `delete` systems through it.
 
+### Diagram
+
+![](../../.gitbook/assets/diagram.png)
+
