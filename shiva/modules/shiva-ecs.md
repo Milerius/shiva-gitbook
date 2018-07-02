@@ -59,3 +59,37 @@ This class will manage the **systems** of the entity component system. You will 
 
 ![system\_manager](../../.gitbook/assets/diagram.png)
 
+### system\_manager\_api
+
+{% tabs %}
+{% tab title="Signature" %}
+```cpp
+class system_manager;
+```
+{% endtab %}
+
+{% tab title="Constructor" %}
+```cpp
+explicit system_manager(entt::dispatcher &dispatcher,
+                                entt::entity_registry &registry,
+                                plugins_registry_t &plugins_registry) noexcept;
+```
+{% endtab %}
+
+{% tab title="Functions" %}
+#### update
+
+```cpp
+size_t update() noexcept
+```
+
+#### Return value
+
+* number of systems successfully updated
+
+{% hint style="info" %}
+If you have not loaded any system into the `system_manager` the function will return 0.
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
