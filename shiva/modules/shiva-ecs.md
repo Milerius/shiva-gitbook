@@ -102,6 +102,16 @@ If you have not loaded any system into the `system_manager` the function will re
 
 If you decide to mark a system, it will be automatically **deleted** at the next loop turn through this function.
 {% endhint %}
+
+#### get\_system
+
+```cpp
+template <typename TSystem>
+const TSystem &get_system() const;
+
+ template <typename TSystem>
+ TSystem &get_system();
+```
 {% endtab %}
 {% endtabs %}
 
