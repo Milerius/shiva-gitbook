@@ -26,5 +26,25 @@ class plugins_registry;
 explicit plugins_registry(shiva::fs::path &&plugins_directory) noexcept;
 ```
 {% endtab %}
+
+{% tab title="Functions" %}
+#### load\_all\_symbols
+
+```cpp
+bool load_all_symbols() noexcept;
+```
+
+**Return value**
+
+* `true` if all the symbols of all the libraries have been correctly loaded
+* `false` if a symbol from one of the libraries was not loaded, or if the **plugins\_directory** doesn't exist
+
+{% hint style="warning" %}
+This function allows you to load symbols from the template to create the object.  
+The symbols are **loaded recursively** from the folder you specified in the object's constructor.  
+If one of the symbols could not be correctly loaded the **function does not stop** and proceeds to load the next plugin.  
+If when browsing folders a corrupted file is spotted the function will switch to **loading the next plugin**.
+{% endhint %}
+{% endtab %}
 {% endtabs %}
 
