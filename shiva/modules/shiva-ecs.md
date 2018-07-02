@@ -112,6 +112,18 @@ const TSystem &get_system() const;
 template <typename TSystem>
 TSystem &get_system();
 ```
+
+#### Template parameters
+
+* **TSystem** Represents the system to get
+
+#### **Return value**
+
+* **TSystem&** Return a reference to the system obtained
+
+{% hint style="danger" %}
+**Throw** a **`std::logic_error`** if the system could not be obtained correctly
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
