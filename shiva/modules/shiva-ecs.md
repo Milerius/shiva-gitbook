@@ -43,3 +43,7 @@ shiva::ranges::for_each(systems_, [this, update_system_functor](auto &&vec) {
 This game loop is based on the gafferon on games tutorial: [Fix your timestep](https://gafferongames.com/game-physics/fix-your-timestep).
 {% endhint %}
 
+### Diagram
+
+![game\_loop\_logic](../../.gitbook/assets/code2flow_bc749.png)
+
