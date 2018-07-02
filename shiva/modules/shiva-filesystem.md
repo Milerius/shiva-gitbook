@@ -22,3 +22,15 @@ This module simply makes a **namespace alias** and some preprocessing mandatory 
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+To manage it from side of cmake you have to do as follow:
+
+```text
+if (LINUX)
+    target_link_libraries(filesystem INTERFACE stdc++fs)
+endif(LINUX)
+
+if(APPLE)
+    target_link_libraries(filesystem INTERFACE c++experimental)
+endif(APPLE)
+```
+
