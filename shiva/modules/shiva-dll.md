@@ -78,7 +78,7 @@ void apply_on_each_symbols(Functor &&functor);
 
 **Notes**
 
-* This function applies the **functor** as a parameter to each of the symbols that were previously loaded by the load\_all\_symbols function.
+* This function applies the **functor** as a parameter to each of the symbols that were previously loaded by the [load\_all\_symbols ](https://shiva.gitbook.io/project/shiva/modules/shiva-dll#load_all_symbols)function.
 
 **Example**
 
