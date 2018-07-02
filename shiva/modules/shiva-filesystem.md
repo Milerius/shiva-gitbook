@@ -24,7 +24,7 @@ This module simply makes a **namespace alias** and some preprocessing mandatory 
 
 To manage it from side of cmake you have to do as follow:
 
-```text
+```cmake
 if (LINUX)
     target_link_libraries(filesystem INTERFACE stdc++fs)
 endif(LINUX)
