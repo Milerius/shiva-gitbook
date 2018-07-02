@@ -100,7 +100,7 @@ This is the function that will update your **systems**. Based on the logic of th
 {% hint style="info" %}
 If you have not loaded any system into the `system_manager` the function will return 0.
 
-If you decide to mark a system, it will be automatically deleted at the next loop turn through this function.
+If you decide to mark a system, it will be automatically **deleted** at the next loop turn through this function.
 {% endhint %}
 {% endtab %}
 {% endtabs %}
