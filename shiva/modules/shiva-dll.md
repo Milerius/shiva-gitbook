@@ -73,6 +73,17 @@ void apply_on_each_symbols(Functor &&functor);
 **Notes**
 
 * This function applies the **functor** as a parameter to each of the symbols that were previously loaded by the load\_all\_symbols function.
+
+**Example**
+
+```cpp
+auto functor = [this](auto &&symbol) {
+                auto res = symbol(//things);
+                // manipulate res
+            };
+
+plugins_registry_.apply_on_each_symbols(functor);
+```
 {% endtab %}
 {% endtabs %}
 
