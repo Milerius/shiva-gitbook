@@ -11,10 +11,20 @@ Through this class you will be able to retrieve the number of plugins, apply a f
 
 ![](../../.gitbook/assets/plugins_registry.png)
 
-**Class signature**
+#### plugins\_registry api
 
+{% tabs %}
+{% tab title="Class Signature" %}
 ```cpp
 template <typename CreatorSignature>
 class plugins_registry;
 ```
+{% endtab %}
+
+{% tab title="Constructor" %}
+```cpp
+explicit plugins_registry(shiva::fs::path &&plugins_directory) noexcept;
+```
+{% endtab %}
+{% endtabs %}
 
