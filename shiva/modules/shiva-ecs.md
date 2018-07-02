@@ -47,5 +47,5 @@ This game loop is based on the gafferon on games tutorial: [Fix your timestep](h
 
 ### Diagram
 
-![game\_loop diagram](../../.gitbook/assets/code2flow_bc749.png)
+![game loop](../../.gitbook/assets/code2flow_99b09.png)
 
