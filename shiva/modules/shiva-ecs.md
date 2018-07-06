@@ -144,6 +144,13 @@ std::tuple<std::add_lvalue_reference_t<std::add_const_t<Systems>>...> get_system
 **Return value**
 
 * **Tuple** of  systems obtained. 
+
+#### has\_system
+
+```cpp
+template <typename TSystem>
+bool has_system() const noexcept;
+```
 {% endtab %}
 {% endtabs %}
 
