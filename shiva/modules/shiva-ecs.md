@@ -151,6 +151,14 @@ std::tuple<std::add_lvalue_reference_t<std::add_const_t<Systems>>...> get_system
 template <typename TSystem>
 bool has_system() const noexcept;
 ```
+
+#### Template parameters
+
+* **TSystem** Represents the system that needs to be verified
+
+#### Return value
+
+* **true** if the system has been  loaded, **false** otherwise
 {% endtab %}
 {% endtabs %}
 
