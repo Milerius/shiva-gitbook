@@ -1,9 +1,3 @@
----
-description: >-
-  This page is for the shared library manipulation module. You will find on this
-  page the different classes of the C++ API.
----
-
 # shiva::dll
 
 ## plugins\_registry:
