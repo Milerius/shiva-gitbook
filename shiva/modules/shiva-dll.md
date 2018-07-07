@@ -28,7 +28,7 @@ explicit plugins_registry(shiva::fs::path &&plugins_directory) noexcept;
 {% endtab %}
 
 {% tab title="Functions" %}
-#### load\_all\_symbols
+### load\_all\_symbols
 
 ```cpp
 bool load_all_symbols() noexcept;
@@ -49,7 +49,7 @@ If one of the symbols could not be correctly loaded the **function does not stop
 If when browsing folders a corrupted file is spotted the function will switch to **loading the next plugin**.
 {% endhint %}
 
-**nb\_plugins**
+### **nb\_plugins**
 
 ```cpp
 size_t nb_plugins() const noexcept;
@@ -59,7 +59,7 @@ size_t nb_plugins() const noexcept;
 
 * numbers of plugins
 
-**apply\_on\_each\_symbols**
+### **apply\_on\_each\_symbols**
 
 ```cpp
 template <typename Functor>
