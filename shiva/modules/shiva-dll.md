@@ -30,32 +30,34 @@ explicit plugins_registry(shiva::fs::path &&plugins_directory) noexcept;
 {% tab title="Functions" %}
 | Functions Name | Description |
 | --- | --- | --- | --- |
-| load\_all\_symbols |  |
-| nb\_plugins |  |
-| apply\_on\_each\_symbols |  |
+| [load\_all\_symbols](shiva-dll.md#load_all_symbols) |  |
+| [nb\_plugins](shiva-dll.md#nb_plugins) |  |
+| [apply\_on\_each\_symbols](shiva-dll.md#apply_on_each_symbols) |  |
+{% endtab %}
+{% endtabs %}
 
-### load\_all\_symbols
+#### load\_all\_symbols
 
 ```cpp
 bool load_all_symbols() noexcept;
 ```
 
-#### **Return value**
+**Return value**
 
 * `true` if all the symbols of all the libraries have been correctly loaded
 * `false` if a symbol from one of the libraries was not loaded, or if the **plugins\_directory** doesn't exist
 
 **Notes**
 
-   This function allows you to load symbols from the template to create the object.  
-   The symbols are **loaded recursively** from the folder you specified in the object's constructor.
+This function allows you to load symbols from the template to create the object.  
+The symbols are **loaded recursively** from the folder you specified in the object's constructor.
 
 {% hint style="warning" %}
 If one of the symbols could not be correctly loaded the **function does not stop** and proceeds to load the next plugin.  
 If when browsing folders a corrupted file is spotted the function will switch to **loading the next plugin**.
 {% endhint %}
 
-### **nb\_plugins**
+#### **nb\_plugins**
 
 ```cpp
 size_t nb_plugins() const noexcept;
@@ -65,7 +67,7 @@ size_t nb_plugins() const noexcept;
 
 * numbers of plugins
 
-### **apply\_on\_each\_symbols**
+#### **apply\_on\_each\_symbols**
 
 ```cpp
 template <typename Functor>
@@ -90,6 +92,4 @@ auto functor = [this](auto &&symbol) {
 
 plugins_registry_.apply_on_each_symbols(functor);
 ```
-{% endtab %}
-{% endtabs %}
 
