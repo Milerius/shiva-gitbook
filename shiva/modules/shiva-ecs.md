@@ -71,14 +71,14 @@ This class will manage the **systems** of the entity component system. You will 
 
 | [update](shiva-ecs.md#update) |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| get\_system |  |
-| get\_systems |  |
-| has\_system |  |
-| has\_systems |  |
-| mark\_system |  |
-| mark\_systems |  |
-| enable\_system |  |
-| enable\_systems |  |
+| [get\_system](shiva-ecs.md#get_system) |  |
+| [get\_systems](shiva-ecs.md#get_systems) |  |
+| [has\_system](shiva-ecs.md#has_system) |  |
+| [has\_systems](shiva-ecs.md#has_systems) |  |
+| [mark\_system](shiva-ecs.md#mark_system) |  |
+| [mark\_systems](shiva-ecs.md#mark_systems) |  |
+| [enable\_system](shiva-ecs.md#enable_system) |  |
+| [enable\_systems](shiva-ecs.md#enable_systems) |  |
 
 
 
