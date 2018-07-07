@@ -87,7 +87,7 @@ This class will manage the **systems** of the entity component system. You will 
 size_t update() noexcept
 ```
 
-**Return value**
+##### Return value
 
 * number of systems successfully updated
 
