@@ -289,3 +289,11 @@ If you deactivate a system, it will not be destroyed but simply ignore during th
  bool disable_systems() noexcept
 ```
 
+#### Template parameters
+
+* **Systems** Represents a list of systems that needs to be disabled
+
+**Return value**
+
+* **true** if the list of systems has been disabled, **false** otherwise
+
