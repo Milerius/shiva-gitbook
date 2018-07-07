@@ -197,6 +197,10 @@ This function recursively calls the **has\_system** function
 **Return value**
 
 * **true** if the system has been marked, **false** otherwise
+
+{% hint style="info" %}
+This function marks a system that will be destroyed at the next turn of the game loop.
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
