@@ -216,6 +216,28 @@ This function marks a system that will be destroyed at the next turn of the game
 **Return value**
 
 * **true** if  the list of systems has been marked, **false** otherwise
+
+#### enable\_system
+
+```cpp
+template <typename TSystem>
+bool enable_system() noexcept
+```
+
+#### Template parameters
+
+* **TSystem** Represents the system that needs to be enabled.
+
+**Return value**
+
+* **true** if the system has been enabled, **false** otherwise
+
+**enable\_systems**
+
+```cpp
+template <typename ... Systems>
+bool enable_systems() noexcept
+```
 {% endtab %}
 {% endtabs %}
 
