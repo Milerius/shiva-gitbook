@@ -65,7 +65,180 @@ This class will manage the **systems** of the entity component system. You will 
 
 ![system\_manager](../../.gitbook/assets/diagram.png)
 
-### system\_manager\_api
+## system\_manager\_api
+
+### Functions
+
+| [update](shiva-ecs.md#update) |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| get\_system |  |
+| get\_systems |  |
+| has\_system |  |
+| has\_systems |  |
+| mark\_system |  |
+| mark\_systems |  |
+| enable\_system |  |
+| enable\_systems |  |
+
+
+
+#### update
+
+```cpp
+size_t update() noexcept
+```
+
+**Return value**
+
+* number of systems successfully updated
+
+**Notes**
+
+This is the function that will update your **systems**. Based on the logic of the different kinds of [shiva systems](shiva-ecs.md#how-works-the-system), this function will take care of updating your systems in the right order.
+
+{% hint style="info" %}
+If you have not loaded any system into the **system\_manager** the function will return 0.
+
+If you decide to mark a system, it will be automatically **deleted** at the next loop turn through this function.
+{% endhint %}
+
+#### get\_system
+
+```cpp
+template <typename TSystem>
+const TSystem &get_system() const;
+
+template <typename TSystem>
+TSystem &get_system();
+```
+
+**Template parameters**
+
+* **TSystem** Represents the system to get
+
+**Return value**
+
+* **TSystem&** Return a reference to the system obtained
+
+{% hint style="danger" %}
+**Throw** a `std::logic_error` if the system could not be obtained correctly or if it was never loaded.
+{% endhint %}
+
+#### get\_systems
+
+```cpp
+template <typename ...Systems>
+std::tuple<std::add_lvalue_reference_t<Systems>...> get_systems();
+
+template <typename ...Systems>
+std::tuple<std::add_lvalue_reference_t<std::add_const_t<Systems>>...> get_systems() const
+```
+
+**Template parameters**
+
+* **Systems** Represents a list of systems to get
+
+**Return value**
+
+* **Tuple** of  systems obtained. 
+
+#### has\_system
+
+```cpp
+template <typename TSystem>
+bool has_system() const noexcept;
+```
+
+**Template parameters**
+
+* **TSystem** Represents the system that needs to be verified
+
+**Return value**
+
+* **true** if the system has been  loaded, **false** otherwise
+
+#### has\_systems
+
+```cpp
+template <typename ... Systems>
+bool has_systems() const noexcept
+```
+
+**Template parameters**
+
+* **Systems** Represents a list of systems that needs to be verified
+
+**Return value**
+
+* **true** if the list of systems has been loaded, **false** otherwise
+
+{% hint style="info" %}
+This function recursively calls the **has\_system** function
+{% endhint %}
+
+#### mark\_system
+
+```cpp
+ template <typename TSystem>
+ bool mark_system() noexcept
+```
+
+**Template parameters**
+
+* **TSystem** Represents the system that needs to be marked
+
+**Return value**
+
+* **true** if the system has been marked, **false** otherwise
+
+{% hint style="info" %}
+This function marks a system that will be destroyed at the next turn of the game loop.
+{% endhint %}
+
+#### mark\_systems
+
+```cpp
+ template <typename ... Systems>
+ bool mark_systems() noexcept
+```
+
+**Template parameters**
+
+* **Systems** Represents a list of systems that needs to be marked
+
+**Return value**
+
+* **true** if  the list of systems has been marked, **false** otherwise
+
+#### enable\_system
+
+```cpp
+template <typename TSystem>
+bool enable_system() noexcept
+```
+
+**Template parameters**
+
+* **TSystem** Represents the system that needs to be enabled.
+
+**Return value**
+
+* **true** if the system has been enabled, **false** otherwise
+
+#### **enable\_systems**
+
+```cpp
+template <typename ... Systems>
+bool enable_systems() noexcept
+```
+
+**Template parameters**
+
+* **Systems** Represents a list of systems that needs to be enabled
+
+**Return value**
+
+* **true** if the list of systems has been enabled, **false** otherwise
 
 {% tabs %}
 {% tab title="Signature" %}
@@ -86,166 +259,6 @@ explicit system_manager(entt::dispatcher &dispatcher,
 * **entt::dispatcher**  The `dispatcher` will be provided to the system when it is created.
 * **entt::entity\_registry** The `entity_registry` will be provided to the system when it is created.
 * [plugins\_registry](shiva-dll.md#plugins_registry-api) registry of the plugged systems
-{% endtab %}
-
-{% tab title="Functions" %}
-### update
-
-```cpp
-size_t update() noexcept
-```
-
-#### Return value
-
-* number of systems successfully updated
-
-**Notes**
-
-This is the function that will update your **systems**. Based on the logic of the different kinds of [shiva systems](shiva-ecs.md#how-works-the-system), this function will take care of updating your systems in the right order.
-
-{% hint style="info" %}
-If you have not loaded any system into the **system\_manager** the function will return 0.
-
-If you decide to mark a system, it will be automatically **deleted** at the next loop turn through this function.
-{% endhint %}
-
-### get\_system
-
-```cpp
-template <typename TSystem>
-const TSystem &get_system() const;
-
-template <typename TSystem>
-TSystem &get_system();
-```
-
-#### Template parameters
-
-* **TSystem** Represents the system to get
-
-#### **Return value**
-
-* **TSystem&** Return a reference to the system obtained
-
-{% hint style="danger" %}
-**Throw** a **`std::logic_error`** if the system could not be obtained correctly or if it was never loaded.
-{% endhint %}
-
-### get\_systems
-
-```cpp
-template <typename ...Systems>
-std::tuple<std::add_lvalue_reference_t<Systems>...> get_systems();
-
-template <typename ...Systems>
-std::tuple<std::add_lvalue_reference_t<std::add_const_t<Systems>>...> get_systems() const
-```
-
-#### Template parameters
-
-* **Systems** Represents a list of systems to get
-
-**Return value**
-
-* **Tuple** of  systems obtained. 
-
-### has\_system
-
-```cpp
-template <typename TSystem>
-bool has_system() const noexcept;
-```
-
-#### Template parameters
-
-* **TSystem** Represents the system that needs to be verified
-
-#### Return value
-
-* **true** if the system has been  loaded, **false** otherwise
-
-### has\_systems
-
-```cpp
-template <typename ... Systems>
-bool has_systems() const noexcept
-```
-
-#### Template parameters
-
-* **Systems** Represents a list of systems that needs to be verified
-
-**Return value**
-
-* **true** if the list of systems has been loaded, **false** otherwise
-
-{% hint style="info" %}
-This function recursively calls the **has\_system** function
-{% endhint %}
-
-### mark\_system
-
-```cpp
- template <typename TSystem>
- bool mark_system() noexcept
-```
-
-**Template parameters**
-
-* **TSystem** Represents the system that needs to be marked
-
-**Return value**
-
-* **true** if the system has been marked, **false** otherwise
-
-{% hint style="info" %}
-This function marks a system that will be destroyed at the next turn of the game loop.
-{% endhint %}
-
-### mark\_systems
-
-```cpp
- template <typename ... Systems>
- bool mark_systems() noexcept
-```
-
-#### Template parameters
-
-* **Systems** Represents a list of systems that needs to be marked
-
-**Return value**
-
-* **true** if  the list of systems has been marked, **false** otherwise
-
-### enable\_system
-
-```cpp
-template <typename TSystem>
-bool enable_system() noexcept
-```
-
-#### Template parameters
-
-* **TSystem** Represents the system that needs to be enabled.
-
-**Return value**
-
-* **true** if the system has been enabled, **false** otherwise
-
-### **enable\_systems**
-
-```cpp
-template <typename ... Systems>
-bool enable_systems() noexcept
-```
-
-#### Template parameters
-
-* **Systems** Represents a list of systems that needs to be enabled
-
-**Return value**
-
-* **true** if the list of systems has been enabled, **false** otherwise
 {% endtab %}
 {% endtabs %}
 
