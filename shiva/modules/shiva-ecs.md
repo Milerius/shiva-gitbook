@@ -100,6 +100,8 @@ explicit system_manager(entt::dispatcher &dispatcher,
 | [mark\_systems](shiva-ecs.md#mark_systems) | mark multiple systems |
 | [enable\_system](shiva-ecs.md#enable_system) | enable a single system |
 | [enable\_systems](shiva-ecs.md#enable_systems) | enable multiple systems |
+| disable\_system | disable a single system |
+| disable\_systems | disable multiple systems |
 {% endtab %}
 {% endtabs %}
 
@@ -260,4 +262,25 @@ bool enable_systems() noexcept
 **Return value**
 
 * **true** if the list of systems has been enabled, **false** otherwise
+
+#### disable\_system
+
+```cpp
+ template <typename TSystem>
+ bool disable_system() noexcept
+```
+
+**Template parameters**
+
+* **TSystem** Represents the system that needs to be disabled
+
+**Return value**
+
+* **true** if the the system has been disabled, **false** otherwise
+
+{% hint style="info" %}
+If you deactivate a system, it will not be destroyed but simply ignore during the game loop
+{% endhint %}
+
+#### disable\_systems
 
