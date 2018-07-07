@@ -102,6 +102,8 @@ explicit system_manager(entt::dispatcher &dispatcher,
 | [enable\_systems](shiva-ecs.md#enable_systems) | enable multiple systems |
 | [disable\_system](shiva-ecs.md#disable_system) | disable a single system |
 | [disable\_systems](shiva-ecs.md#disable_systems) | disable multiple systems |
+| [create\_system](shiva-ecs.md#create_system) | create a single system |
+| load\_systems | create multiple systems |
 {% endtab %}
 {% endtabs %}
 
@@ -312,4 +314,20 @@ If you deactivate a system, it will not be destroyed but simply ignore during th
 {% hint style="info" %}
 This function recursively calls the [disable\_system](shiva-ecs.md#disable_system) function
 {% endhint %}
+
+#### create\_system
+
+```cpp
+template <typename TSystem, typename ... SystemArgs>
+TSystem &create_system(SystemArgs &&...args)
+```
+
+#### Template parameters
+
+* **TSystem** represents the type of system to create
+* **SystemArgs** represents the arguments needed to construct the system to create
+
+#### Return value
+
+* Returns a reference to the created system
 
