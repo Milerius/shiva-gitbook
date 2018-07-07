@@ -1,6 +1,10 @@
+---
+description: >-
+  In this page you will find all the information you need on the ecs part of
+  shiva, the api of the different class, the game loop architecture, examples
+---
+
 # shiva::ecs
-
-
 
 ## How works the System
 
