@@ -201,6 +201,13 @@ This function recursively calls the **has\_system** function
 {% hint style="info" %}
 This function marks a system that will be destroyed at the next turn of the game loop.
 {% endhint %}
+
+#### mark\_systems
+
+```cpp
+ template <typename ... Systems>
+ bool mark_systems() noexcept
+```
 {% endtab %}
 {% endtabs %}
 
