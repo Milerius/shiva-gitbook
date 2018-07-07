@@ -159,6 +159,25 @@ bool has_system() const noexcept;
 #### Return value
 
 * **true** if the system has been  loaded, **false** otherwise
+
+#### has\_systems
+
+```cpp
+template <typename ... Systems>
+bool has_systems() const noexcept
+```
+
+#### Template parameters
+
+* **Systems** Represents a list of systems that needs to be verified
+
+**Return value**
+
+* **true** if the list of systems has been loaded, **false** otherwise
+
+{% hint style="info" %}
+This function recursively calls the **has\_system** function
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
