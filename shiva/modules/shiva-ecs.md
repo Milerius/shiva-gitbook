@@ -100,8 +100,8 @@ explicit system_manager(entt::dispatcher &dispatcher,
 | [mark\_systems](shiva-ecs.md#mark_systems) | mark multiple systems |
 | [enable\_system](shiva-ecs.md#enable_system) | enable a single system |
 | [enable\_systems](shiva-ecs.md#enable_systems) | enable multiple systems |
-| disable\_system | disable a single system |
-| disable\_systems | disable multiple systems |
+| [disable\_system](shiva-ecs.md#disable_system) | disable a single system |
+| [disable\_systems](shiva-ecs.md#disable_systems) | disable multiple systems |
 {% endtab %}
 {% endtabs %}
 
@@ -196,7 +196,7 @@ bool has_systems() const noexcept
 * **true** if the list of systems has been loaded, **false** otherwise
 
 {% hint style="info" %}
-This function recursively calls the **has\_system** function
+This function recursively calls the [has\_system](shiva-ecs.md#has_system) function
 {% endhint %}
 
 #### mark\_system
