@@ -28,6 +28,12 @@ explicit plugins_registry(shiva::fs::path &&plugins_directory) noexcept;
 {% endtab %}
 
 {% tab title="Functions" %}
+| Functions Name | Description |
+| --- | --- | --- | --- |
+| load\_all\_symbols |  |
+| nb\_plugins |  |
+| apply\_on\_each\_symbols |  |
+
 ### load\_all\_symbols
 
 ```cpp
