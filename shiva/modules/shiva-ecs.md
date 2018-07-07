@@ -12,9 +12,9 @@ description: >-
 
 SFME have 3 differents kinds of systems:
 
-*  **PreUpdate**: These systems are the first to be updated in the game loop, they are generally used to retrieve user input, or manage network events for example.
-*  **LogicUpdate**: These systems are the second to be updated in the game loop, they are generally used for game logic such as movement or collisions for example.
-*  **PostUpdate**: These systems are the last to be updated in the game loop, they are generally used for rendering or interpolation for example.
+* **PreUpdate**: These systems are the first to be updated in the game loop, they are generally used to retrieve user input, or manage network events for example.
+* **LogicUpdate**: These systems are the second to be updated in the game loop, they are generally used for game logic such as movement or collisions for example.
+* **PostUpdate**: These systems are the last to be updated in the game loop, they are generally used for rendering or interpolation for example.
 
 The pseudo code will look like this:
 
@@ -69,18 +69,17 @@ This class will manage the **systems** of the entity component system. You will 
 
 ### Functions
 
-| [update](shiva-ecs.md#update) |  |
+| Function Name | Description |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [get\_system](shiva-ecs.md#get_system) |  |
-| [get\_systems](shiva-ecs.md#get_systems) |  |
-| [has\_system](shiva-ecs.md#has_system) |  |
-| [has\_systems](shiva-ecs.md#has_systems) |  |
-| [mark\_system](shiva-ecs.md#mark_system) |  |
-| [mark\_systems](shiva-ecs.md#mark_systems) |  |
-| [enable\_system](shiva-ecs.md#enable_system) |  |
-| [enable\_systems](shiva-ecs.md#enable_systems) |  |
-
----
+| [update](shiva-ecs.md#update) | update the systems |
+| [get\_system](shiva-ecs.md#get_system) | get a single system |
+| [get\_systems](shiva-ecs.md#get_systems) | get multiple systems |
+| [has\_system](shiva-ecs.md#has_system) | check if a system is present |
+| [has\_systems](shiva-ecs.md#has_systems) | check if multiple systems are present |
+| [mark\_system](shiva-ecs.md#mark_system) | mark a single system |
+| [mark\_systems](shiva-ecs.md#mark_systems) | mark multiple systems |
+| [enable\_system](shiva-ecs.md#enable_system) | enable a single system |
+| [enable\_systems](shiva-ecs.md#enable_systems) | enable multiple systems |
 
 #### update
 
@@ -101,8 +100,6 @@ If you have not loaded any system into the **system\_manager** the function will
 
 If you decide to mark a system, it will be automatically **deleted** at the next loop turn through this function.
 {% endhint %}
-
----
 
 #### get\_system
 
@@ -242,14 +239,10 @@ bool enable_systems() noexcept
 
 * **true** if the list of systems has been enabled, **false** otherwise
 
-{% tabs %}
-{% tab title="Signature" %}
 ```cpp
 class system_manager;
 ```
-{% endtab %}
 
-{% tab title="Constructor" %}
 ```cpp
 explicit system_manager(entt::dispatcher &dispatcher,
                                 entt::entity_registry &registry,
@@ -261,6 +254,4 @@ explicit system_manager(entt::dispatcher &dispatcher,
 * **entt::dispatcher**  The `dispatcher` will be provided to the system when it is created.
 * **entt::entity\_registry** The `entity_registry` will be provided to the system when it is created.
 * [plugins\_registry](shiva-dll.md#plugins_registry-api) registry of the plugged systems
-{% endtab %}
-{% endtabs %}
 
