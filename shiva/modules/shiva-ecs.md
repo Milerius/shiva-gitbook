@@ -331,3 +331,25 @@ TSystem &create_system(SystemArgs &&...args)
 
 * Returns a reference to the created system
 
+#### load\_systems
+
+```cpp
+template <typename ...TSystems>
+std::tuple<std::add_lvalue_reference_t<Systems>...> load_systems()
+
+template <typename ...TSystems>
+std::tuple<std::add_lvalue_reference_t<std::add_const_t<Systems>>...> load_systems()
+```
+
+**Template parameters**
+
+* **TSystems** represents a list of systems to be loaded
+
+**Return value**
+
+* **Tuple** of systems loaded
+
+{% hint style="warning" %}
+This function calls [get\_systems](shiva-ecs.md#get_systems) and can therefore potentially **throw**
+{% endhint %}
+
