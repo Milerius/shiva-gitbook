@@ -165,6 +165,10 @@ std::tuple<std::add_lvalue_reference_t<std::add_const_t<Systems>>...> get_system
 
 * **Tuple** of  systems obtained. 
 
+{% hint style="info" %}
+This function recursively calls the [get\_system](shiva-ecs.md#get_systems) function
+{% endhint %}
+
 #### has\_system
 
 ```cpp
@@ -233,6 +237,10 @@ This function marks a system that will be destroyed at the next turn of the game
 
 * **true** if  the list of systems has been marked, **false** otherwise
 
+{% hint style="info" %}
+This function recursively calls the [mark\_system](shiva-ecs.md#mark_systems) function
+{% endhint %}
+
 #### enable\_system
 
 ```cpp
@@ -262,6 +270,10 @@ bool enable_systems() noexcept
 **Return value**
 
 * **true** if the list of systems has been enabled, **false** otherwise
+
+{% hint style="info" %}
+This function recursively calls the [enable\_system](shiva-ecs.md#enable_system) function
+{% endhint %}
 
 #### disable\_system
 
@@ -296,4 +308,8 @@ If you deactivate a system, it will not be destroyed but simply ignore during th
 **Return value**
 
 * **true** if the list of systems has been disabled, **false** otherwise
+
+{% hint style="info" %}
+This function recursively calls the [disable\_system](shiva-ecs.md#disable_system) function
+{% endhint %}
 
