@@ -89,7 +89,7 @@ explicit system_manager(entt::dispatcher &dispatcher,
 {% endtab %}
 
 {% tab title="Functions" %}
-#### update
+### update
 
 ```cpp
 size_t update() noexcept
@@ -109,7 +109,7 @@ If you have not loaded any system into the **system\_manager** the function will
 If you decide to mark a system, it will be automatically **deleted** at the next loop turn through this function.
 {% endhint %}
 
-#### get\_system
+### get\_system
 
 ```cpp
 template <typename TSystem>
@@ -131,7 +131,7 @@ TSystem &get_system();
 **Throw** a **`std::logic_error`** if the system could not be obtained correctly or if it was never loaded.
 {% endhint %}
 
-#### get\_systems
+### get\_systems
 
 ```cpp
 template <typename ...Systems>
@@ -149,7 +149,7 @@ std::tuple<std::add_lvalue_reference_t<std::add_const_t<Systems>>...> get_system
 
 * **Tuple** of  systems obtained. 
 
-#### has\_system
+### has\_system
 
 ```cpp
 template <typename TSystem>
@@ -164,7 +164,7 @@ bool has_system() const noexcept;
 
 * **true** if the system has been  loaded, **false** otherwise
 
-#### has\_systems
+### has\_systems
 
 ```cpp
 template <typename ... Systems>
@@ -183,7 +183,7 @@ bool has_systems() const noexcept
 This function recursively calls the **has\_system** function
 {% endhint %}
 
-#### mark\_system
+### mark\_system
 
 ```cpp
  template <typename TSystem>
@@ -202,7 +202,7 @@ This function recursively calls the **has\_system** function
 This function marks a system that will be destroyed at the next turn of the game loop.
 {% endhint %}
 
-#### mark\_systems
+### mark\_systems
 
 ```cpp
  template <typename ... Systems>
@@ -217,7 +217,7 @@ This function marks a system that will be destroyed at the next turn of the game
 
 * **true** if  the list of systems has been marked, **false** otherwise
 
-#### enable\_system
+### enable\_system
 
 ```cpp
 template <typename TSystem>
@@ -232,7 +232,7 @@ bool enable_system() noexcept
 
 * **true** if the system has been enabled, **false** otherwise
 
-**enable\_systems**
+### **enable\_systems**
 
 ```cpp
 template <typename ... Systems>
