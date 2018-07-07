@@ -284,3 +284,8 @@ If you deactivate a system, it will not be destroyed but simply ignore during th
 
 #### disable\_systems
 
+```cpp
+ template <typename ... Systems>
+ bool disable_systems() noexcept
+```
+
