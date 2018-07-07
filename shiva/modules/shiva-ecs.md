@@ -208,6 +208,14 @@ This function marks a system that will be destroyed at the next turn of the game
  template <typename ... Systems>
  bool mark_systems() noexcept
 ```
+
+#### Template parameters
+
+* **Systems** Represents a list of systems that needs to be marked
+
+**Return value**
+
+* **true** if  the list of systems has been marked, **false** otherwise
 {% endtab %}
 {% endtabs %}
 
