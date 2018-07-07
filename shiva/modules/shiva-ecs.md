@@ -80,7 +80,7 @@ This class will manage the **systems** of the entity component system. You will 
 | [enable\_system](shiva-ecs.md#enable_system) |  |
 | [enable\_systems](shiva-ecs.md#enable_systems) |  |
 
-
+---
 
 #### update
 
@@ -101,6 +101,8 @@ If you have not loaded any system into the **system\_manager** the function will
 
 If you decide to mark a system, it will be automatically **deleted** at the next loop turn through this function.
 {% endhint %}
+
+---
 
 #### get\_system
 
