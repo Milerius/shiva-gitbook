@@ -178,6 +178,21 @@ bool has_systems() const noexcept
 {% hint style="info" %}
 This function recursively calls the **has\_system** function
 {% endhint %}
+
+#### mark\_system
+
+```cpp
+ template <typename TSystem>
+ bool mark_system() noexcept
+```
+
+**Template parameters**
+
+* **TSystem** Represents the system that needs to be marked
+
+**Return value**
+
+* **true** if the system has been marked, **false** otherwise
 {% endtab %}
 {% endtabs %}
 
