@@ -103,7 +103,7 @@ explicit system_manager(entt::dispatcher &dispatcher,
 | [disable\_system](shiva-ecs.md#disable_system) | disable a single system |
 | [disable\_systems](shiva-ecs.md#disable_systems) | disable multiple systems |
 | [create\_system](shiva-ecs.md#create_system) | create a single system |
-| load\_systems | create multiple systems |
+| [load\_systems](shiva-ecs.md#load_systems) | create multiple systems |
 {% endtab %}
 {% endtabs %}
 
