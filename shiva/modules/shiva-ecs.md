@@ -238,6 +238,14 @@ bool enable_system() noexcept
 template <typename ... Systems>
 bool enable_systems() noexcept
 ```
+
+#### Template parameters
+
+* **Systems** Represents a list of systems that needs to be enabled
+
+**Return value**
+
+* **true** if the list of systems has been enabled, **false** otherwise
 {% endtab %}
 {% endtabs %}
 
