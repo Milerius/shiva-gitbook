@@ -67,10 +67,28 @@ This class will manage the **systems** of the entity component system. You will 
 
 ## system\_manager\_api
 
-### Functions
+{% tabs %}
+{% tab title="Signature" %}
 
+{% endtab %}
+
+{% tab title="Constructor" %}
+
+
+|  |  |
+| --- | :---: |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+{% endtab %}
+
+{% tab title="Functions" %}
 | Function Name | Description |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | :---: |
 | [update](shiva-ecs.md#update) | update the systems |
 | [get\_system](shiva-ecs.md#get_system) | get a single system |
 | [get\_systems](shiva-ecs.md#get_systems) | get multiple systems |
@@ -80,6 +98,8 @@ This class will manage the **systems** of the entity component system. You will 
 | [mark\_systems](shiva-ecs.md#mark_systems) | mark multiple systems |
 | [enable\_system](shiva-ecs.md#enable_system) | enable a single system |
 | [enable\_systems](shiva-ecs.md#enable_systems) | enable multiple systems |
+{% endtab %}
+{% endtabs %}
 
 #### update
 
@@ -87,7 +107,7 @@ This class will manage the **systems** of the entity component system. You will 
 size_t update() noexcept
 ```
 
-##### Return value
+**Return value**
 
 * number of systems successfully updated
 
