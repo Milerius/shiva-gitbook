@@ -1,6 +1,6 @@
 # shiva::entt
 
-## Intro
+## Purpose
 
 This module simply makes a **namespace alias** to use [EnTT](https://github.com/skypjack/entt). This module is represented by a cmake interface library that facilitates its handling through other modules.  
 But also small changes to avoid situations of ambiguous code related to scripting
