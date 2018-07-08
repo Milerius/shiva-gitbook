@@ -65,7 +65,7 @@ This class will manage the **systems** of the entity component system. You will 
 
 ![system\_manager](../../.gitbook/assets/diagram.png)
 
-### system\_manager\_api
+### system\_manager api
 
 {% tabs %}
 {% tab title="Signature" %}
@@ -367,7 +367,7 @@ base class of shiva systems
 
 ![base\_system](../../.gitbook/assets/baseclass.png)
 
-### base\_system\_api
+### base\_system api
 
 {% tabs %}
 {% tab title="Signature" %}
@@ -476,4 +476,12 @@ bool is_a_plugin() const noexcept
 **Return value**
 
 * **true** if the system is a plugin, **false** otherwise
+
+## system
+
+### Description
+
+### Diagram
+
+### system api
 
