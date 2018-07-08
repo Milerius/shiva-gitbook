@@ -1,4 +1,4 @@
-# Release notes
+# Changelog
 
 ## Shiva 0.5
 

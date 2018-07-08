@@ -31,5 +31,5 @@
   * [Scripting](shiva/scripting/README.md)
     * [Lua](shiva/scripting/lua.md)
     * [Python](shiva/scripting/python.md)
-  * [Release notes](shiva/release-notes.md)
+  * [Changelog](shiva/release-notes.md)
 
