@@ -367,6 +367,8 @@ base class of shiva systems
 
 ![base\_system](../../.gitbook/assets/baseclass.png)
 
+### base\_system\_api
+
 {% tabs %}
 {% tab title="Signature" %}
 ```cpp
