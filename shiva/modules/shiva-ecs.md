@@ -417,6 +417,10 @@ This function marks the system, it will be destroyed in the next turn of the [ga
 void unmark() noexcept
 ```
 
+{% hint style="info" %}
+This function unmark the system, allows the prevention of a destruction in the next turn of the [game loop](shiva-ecs.md#diagram) by the [system\_manager](shiva-ecs.md#system_manager).
+{% endhint %}
+
 #### is\_marked
 
 ```cpp
@@ -439,6 +443,10 @@ void enable() noexcept
 void disable() noexcept
 ```
 
+{% hint style="info" %}
+Take a look @ [disable\_system](shiva-ecs.md#disable_system)
+{% endhint %}
+
 #### is\_enabled
 
 ```cpp
@@ -454,6 +462,10 @@ bool is_enabled() const noexcept
 ```cpp
 void im_a_plugin() noexcept
 ```
+
+{% hint style="info" %}
+This function defines the system as a plugin, and therefore will use more feature in runtime to work properly
+{% endhint %}
 
 #### is\_a\_plugin
 
