@@ -388,7 +388,7 @@ explicit base_system(entt::dispatcher &dispatcher,
 | update | Pure virtual function, must be override by the client.  update the system. |
 | get\_name | Pure virtual function, must be override by the client.  get the system name. |
 | get\_system\_type\_RTTI | Pure virtual function, override by the system class. get the system type at runtime \(for plugins\).  |
-| mark | mark the system |
+| [mark](shiva-ecs.md#mark) | mark the system |
 | unmark | unmark the system |
 | is\_marked | check if the system is marked. |
 | enable | enable the system |
@@ -408,4 +408,20 @@ void mark() noexcept
 {% hint style="info" %}
 This function marks the system, it will be destroyed in the next turn of the [game loop](shiva-ecs.md#diagram) by the [system\_manager](shiva-ecs.md#system_manager).
 {% endhint %}
+
+#### unmark
+
+```cpp
+void unmark() noexcept
+```
+
+#### is\_marked
+
+```cpp
+bool is_marked() const noexcept
+```
+
+**Return value**
+
+* **true** if the system is marked, **false** otherwise
 
