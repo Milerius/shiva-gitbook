@@ -355,6 +355,10 @@ This function calls [get\_systems](shiva-ecs.md#get_systems) and can therefore p
 
 ## base\_system
 
+{% hint style="danger" %}
+This class is an **abstract class**, it is documented but is present only to make type-erasure of the class system which is templated
+{% endhint %}
+
 ### Usage
 
 base class of shiva systems
@@ -379,7 +383,19 @@ explicit base_system(entt::dispatcher &dispatcher,
 {% endtab %}
 
 {% tab title="Functions" %}
-
+| Function Name | Description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| update | Pure virtual function, must be override by the client.  update the system. |
+| get\_name | Pure virtual function, must be override by the client.  get the system name. |
+| get\_system\_type\_RTTI | Pure virtual function, override by the system class. get the system type at runtime \(for plugins\).  |
+| mark | mark the system |
+| unmark | unmark the system |
+| is\_marked | check if the system is marked. |
+| enable | enable the system |
+| disable | disable the system |
+| is\_enabled | check if the system is enabled. |
+| im\_a\_plugin | defines the system as a plugin. |
+| is\_a\_plugin | check if the system is a plugin. |
 {% endtab %}
 {% endtabs %}
 
