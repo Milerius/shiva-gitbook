@@ -26,6 +26,8 @@
     * [shiva::lua](shiva/modules/shiva-lua.md)
   * [Tutorial](shiva/tutorial/README.md)
     * [Quick'start](shiva/tutorial/quickstart.md)
+    * [How to create a system plugin](shiva/tutorial/how-to-create-a-system-plugin.md)
+    * [How to create a scripted system](shiva/tutorial/how-to-create-a-scripted-system.md)
   * [Scripting](shiva/scripting/README.md)
     * [Lua](shiva/scripting/lua.md)
     * [Python](shiva/scripting/python.md)

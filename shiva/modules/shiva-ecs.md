@@ -1,7 +1,7 @@
 ---
 description: >-
   In this page you will find all the information you need on the ecs part of
-  shiva, the api of the different class, the game loop architecture, examples
+  shiva, the api of the different class, the game loop architecture.
 ---
 
 # shiva::ecs
