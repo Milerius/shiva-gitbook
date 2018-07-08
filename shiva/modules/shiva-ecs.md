@@ -153,10 +153,10 @@ TSystem &get_system();
 
 ```cpp
 template <typename ...Systems>
-std::tuple<std::add_lvalue_reference_t<Systems>...> get_systems();
+std::tuple<std::add_lvalue_reference_t<TSystems>...> get_systems();
 
 template <typename ...Systems>
-std::tuple<std::add_lvalue_reference_t<std::add_const_t<Systems>>...> get_systems() const
+std::tuple<std::add_lvalue_reference_t<std::add_const_t<TSystems>>...> get_systems() const
 ```
 
 **Template parameters**
