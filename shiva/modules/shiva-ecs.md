@@ -6,11 +6,11 @@ description: >-
 
 # shiva::ecs
 
-## How works the System
+## How does the system works ?
 
 ### Systems
 
-SFME have 3 differents kinds of systems:
+Shiva have 3 differents kinds of systems:
 
 * **PreUpdate**: These systems are the first to be updated in the game loop, they are generally used to retrieve user input, or manage network events for example.
 * **LogicUpdate**: These systems are the second to be updated in the game loop, they are generally used for game logic such as movement or collisions for example.
