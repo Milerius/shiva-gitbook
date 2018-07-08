@@ -24,4 +24,5 @@
       * [shiva::system-sfml-graphics](shiva/modules/shiva-sfml/shiva-system-sfml-graphics.md)
     * [shiva::pyscripting](shiva/modules/shiva-pyscripting.md)
     * [shiva::lua](shiva/modules/shiva-lua.md)
+  * [Tutorial](shiva/tutorial.md)
 
