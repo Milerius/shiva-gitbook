@@ -483,5 +483,7 @@ bool is_a_plugin() const noexcept
 
 ### Diagram
 
+![system](../../.gitbook/assets/system.png)
+
 ### system api
 
