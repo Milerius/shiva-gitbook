@@ -2,7 +2,7 @@
 
 ## plugins\_registry:
 
-### **Usage**
+### **Description**
 
 This class will allow you to store plugin creation symbols through its template _**CreatorSignature**_ parameter.  
 Through this class you will be able to retrieve the number of plugins, apply a functor on each of the symbols \(as creates the plugin for example\).
@@ -30,9 +30,9 @@ explicit plugins_registry(shiva::fs::path &&plugins_directory) noexcept;
 {% tab title="Functions" %}
 | Functions Name | Description |
 | --- | --- | --- | --- |
-| [load\_all\_symbols](shiva-dll.md#load_all_symbols) |  |
-| [nb\_plugins](shiva-dll.md#nb_plugins) |  |
-| [apply\_on\_each\_symbols](shiva-dll.md#apply_on_each_symbols) |  |
+| [load\_all\_symbols](shiva-dll.md#load_all_symbols) | load all symbols for plugins creation from the plugins\_directory |
+| [nb\_plugins](shiva-dll.md#nb_plugins) | return the number of plugins |
+| [apply\_on\_each\_symbols](shiva-dll.md#apply_on_each_symbols) | apply a functor on each symbols |
 {% endtab %}
 {% endtabs %}
 
