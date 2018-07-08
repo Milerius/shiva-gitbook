@@ -500,16 +500,43 @@ class system : public base_system;
 {% tab title="Constructor" %}
 ```cpp
  template <typename ...Args>
- explicit system(Args &&...args) noexcept
+ explicit system(Args &&...args) noexcept // *1
+ 
+ system(shiva::entt::dispatcher &dispatcher,
+               shiva::entt::entity_registry &entity_registry,
+               const float &fixed_delta_time,
+               std::string class_name) // *2
 ```
 
 {% hint style="success" %}
-This constructor simply forward its arguments to base\_system
+\(1\) This constructor simply forward its arguments to base\_system.
+{% endhint %}
+
+{% hint style="info" %}
+\(2\) This constructor is use for scripting.
 {% endhint %}
 {% endtab %}
 
 {% tab title="Functions" %}
+| Function Name | Description |
+| --- | --- | --- | --- | --- |
+| update | Pure virtual function, must be override by the client. update the system. |
+| get\_system\_type | get the system type at compile time |
+| get\_system\_type\_RTTI | get the system type at runtime |
+| get\_name | get the system name. |
+{% endtab %}
 
+{% tab title="Typedefs" %}
+```cpp
+template <typename TSystemDerived>
+using logic_update_system = system<TSystemDerived, system_logic_update>;
+
+template <typename TSystemDerived>
+using pre_update_system = system<TSystemDerived, system_pre_update>;
+
+template <typename TSystemDerived>
+using post_update_system = system<TSystemDerived, system_post_update>;
+```
 {% endtab %}
 {% endtabs %}
 
