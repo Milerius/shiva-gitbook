@@ -363,3 +363,23 @@ base class of shiva systems
 
 ![base\_system](../../.gitbook/assets/baseclass.png)
 
+{% tabs %}
+{% tab title="Signature" %}
+```cpp
+class base_system;
+```
+{% endtab %}
+
+{% tab title="Constructor" %}
+```cpp
+explicit base_system(entt::dispatcher &dispatcher,
+                     entt::entity_registry &entity_registry,
+                     const float &fixed_delta_time) noexcept
+```
+{% endtab %}
+
+{% tab title="Functions" %}
+
+{% endtab %}
+{% endtabs %}
+
