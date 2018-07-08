@@ -497,8 +497,15 @@ class system : public base_system;
 ```
 {% endtab %}
 
-{% tab title="Creator" %}
+{% tab title="Constructor" %}
+```cpp
+ template <typename ...Args>
+ explicit system(Args &&...args) noexcept
+```
 
+{% hint style="success" %}
+This constructor simply forward its arguments to base\_system
+{% endhint %}
 {% endtab %}
 
 {% tab title="Functions" %}
