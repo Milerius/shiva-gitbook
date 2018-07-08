@@ -357,5 +357,9 @@ This function calls [get\_systems](shiva-ecs.md#get_systems) and can therefore p
 
 ### Usage
 
+base class of shiva systems
+
 ### Diagram
+
+![base\_system](../../.gitbook/assets/baseclass.png)
 
