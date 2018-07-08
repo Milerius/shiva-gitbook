@@ -578,11 +578,19 @@ using post_update_system = system<TSystemDerived, system_post_update>;
 static constexpr system_type get_system_type() noexcept
 ```
 
+**Return value**
+
+* [system\_type](shiva-ecs.md#system_type) of the derived system.
+
 #### get\_system\_type\_RTTI
 
 ```cpp
 system_type get_system_type_RTTI() const noexcept final
 ```
+
+**Return value**
+
+* [system\_type](shiva-ecs.md#system_type) of the derived system
 
 #### get\_name
 
