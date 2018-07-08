@@ -598,3 +598,7 @@ system_type get_system_type_RTTI() const noexcept final
 const std::string &get_name() const noexcept final
 ```
 
+**Return value**
+
+* **name** of the derived system.
+
