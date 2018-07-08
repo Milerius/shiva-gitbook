@@ -481,6 +481,8 @@ bool is_a_plugin() const noexcept
 
 ### Description
 
+This class is the class you will have to inherit to create your systems
+
 ### Diagram
 
 ![system](../../.gitbook/assets/system.png)
