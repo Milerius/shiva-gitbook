@@ -540,3 +540,21 @@ using post_update_system = system<TSystemDerived, system_post_update>;
 {% endtab %}
 {% endtabs %}
 
+#### get\_system\_type
+
+```cpp
+static constexpr system_type get_system_type() noexcept
+```
+
+#### get\_system\_type\_RTTI
+
+```cpp
+system_type get_system_type_RTTI() const noexcept final
+```
+
+#### get\_name
+
+```cpp
+const std::string &get_name() const noexcept final
+```
+
