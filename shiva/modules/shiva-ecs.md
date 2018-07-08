@@ -59,6 +59,8 @@ This game loop is based on the gafferon on games tutorial: [Fix your timestep](h
 
 ### Description
 
+This file contains an enum representing the different types of [systems presented previously](shiva-ecs.md#how-works-the-system), and three strong types, later used in template parameter by the [system class](shiva-ecs.md#system)
+
 ### Diagram
 
 ### system\_type api
