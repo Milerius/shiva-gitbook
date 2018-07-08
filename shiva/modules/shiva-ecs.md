@@ -489,3 +489,20 @@ This class is the class you will have to inherit to create your systems
 
 ### system api
 
+{% tabs %}
+{% tab title="Signature" %}
+```cpp
+template <typename SystemDerived, typename TSystemType>
+class system : public base_system;
+```
+{% endtab %}
+
+{% tab title="Creator" %}
+
+{% endtab %}
+
+{% tab title="Functions" %}
+
+{% endtab %}
+{% endtabs %}
+
