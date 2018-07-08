@@ -63,6 +63,28 @@ This game loop is based on the gafferon on games tutorial: [Fix your timestep](h
 
 ### system\_type api
 
+{% tabs %}
+{% tab title="Enum" %}
+```cpp
+enum system_type
+{
+  pre_update = 0,
+  logic_update = 1,
+  post_update = 2,
+  size = 3,
+};
+```
+{% endtab %}
+
+{% tab title="Typedefs" %}
+```cpp
+using system_pre_update = NamedType<system_type,struct system_pre_update_tag>;
+using system_post_update = NamedType<system_type, struct system_post_update_tag>;
+using system_logic_update = NamedType<system_type, struct system_logic_update_tag>;
+```
+{% endtab %}
+{% endtabs %}
+
 ## system\_manager
 
 ### Description
