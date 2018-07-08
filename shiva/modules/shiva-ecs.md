@@ -399,3 +399,13 @@ explicit base_system(entt::dispatcher &dispatcher,
 {% endtab %}
 {% endtabs %}
 
+#### mark
+
+```cpp
+void mark() noexcept
+```
+
+{% hint style="info" %}
+This function marks the system, it will be destroyed in the next turn of the [game loop](shiva-ecs.md#diagram) by the [system\_manager](shiva-ecs.md#system_manager).
+{% endhint %}
+
