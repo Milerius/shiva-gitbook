@@ -65,7 +65,7 @@ This class will manage the **systems** of the entity component system. You will 
 
 ![system\_manager](../../.gitbook/assets/diagram.png)
 
-## system\_manager\_api
+### system\_manager\_api
 
 {% tabs %}
 {% tab title="Signature" %}
@@ -354,4 +354,8 @@ This function calls [get\_systems](shiva-ecs.md#get_systems) and can therefore p
 {% endhint %}
 
 ## base\_system
+
+### Usage
+
+### Diagram
 
