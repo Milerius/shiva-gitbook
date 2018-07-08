@@ -55,6 +55,8 @@ This game loop is based on the gafferon on games tutorial: [Fix your timestep](h
 
 ![simple diagram](../../.gitbook/assets/code2flow_3c3ba.png)
 
+## system\_type
+
 ## system\_manager
 
 ### Description
