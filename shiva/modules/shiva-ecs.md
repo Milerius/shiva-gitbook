@@ -57,6 +57,12 @@ This game loop is based on the gafferon on games tutorial: [Fix your timestep](h
 
 ## system\_type
 
+### Description
+
+### Diagram
+
+### system\_type api
+
 ## system\_manager
 
 ### Description
