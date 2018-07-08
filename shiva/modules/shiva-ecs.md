@@ -521,9 +521,9 @@ class system : public base_system;
 | Function Name | Description |
 | --- | --- | --- | --- | --- |
 | update | Pure virtual function, must be override by the client. update the system. |
-| get\_system\_type | get the system type at compile time |
-| get\_system\_type\_RTTI | get the system type at runtime |
-| get\_name | get the system name. |
+| [get\_system\_type](shiva-ecs.md#get_system_type) | get the system type at compile time |
+| [get\_system\_type\_RTTI](shiva-ecs.md#get_system_type_rtti) | get the system type at runtime |
+| [get\_name](shiva-ecs.md#get_name) | get the system name. |
 {% endtab %}
 
 {% tab title="Typedefs" %}
