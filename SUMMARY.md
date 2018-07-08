@@ -26,4 +26,7 @@
     * [shiva::lua](shiva/modules/shiva-lua.md)
   * [Tutorial](shiva/tutorial/README.md)
     * [Quick'start](shiva/tutorial/quickstart.md)
+  * [Scripting](shiva/scripting/README.md)
+    * [Lua](shiva/scripting/lua.md)
+    * [Python](shiva/scripting/python.md)
 
