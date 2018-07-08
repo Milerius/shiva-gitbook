@@ -353,3 +353,5 @@ std::tuple<std::add_lvalue_reference_t<std::add_const_t<Systems>>...> load_syste
 This function calls [get\_systems](shiva-ecs.md#get_systems) and can therefore potentially **throw**
 {% endhint %}
 
+## base\_system
+
