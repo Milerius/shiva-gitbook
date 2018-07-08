@@ -57,7 +57,7 @@ This game loop is based on the gafferon on games tutorial: [Fix your timestep](h
 
 ## system\_manager
 
-### Usage
+### Description
 
 This class will manage the **systems** of the entity component system. You will be able to `add`, `remove`, `retrieve` , `update` or `delete` systems through it.
 
@@ -359,7 +359,7 @@ This function calls [get\_systems](shiva-ecs.md#get_systems) and can therefore p
 This class is an **abstract class**, it is documented but is present only to make type-erasure of the class system which is templated
 {% endhint %}
 
-### Usage
+### Description
 
 base class of shiva systems
 
