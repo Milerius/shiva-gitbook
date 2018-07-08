@@ -429,11 +429,39 @@ bool is_marked() const noexcept
 
 #### enable
 
+```cpp
+void enable() noexcept
+```
+
 #### disable
+
+```cpp
+void disable() noexcept
+```
 
 #### is\_enabled
 
+```cpp
+bool is_enabled() const noexcept
+```
+
+**Return value**
+
+* **true** if the system is enabled, **false** otherwise
+
 #### im\_a\_plugin
 
+```cpp
+void im_a_plugin() noexcept
+```
+
 #### is\_a\_plugin
+
+```cpp
+bool is_a_plugin() const noexcept
+```
+
+**Return value**
+
+* **true** if the system is a plugin, **false** otherwise
 
