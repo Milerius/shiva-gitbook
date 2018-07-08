@@ -389,13 +389,13 @@ explicit base_system(entt::dispatcher &dispatcher,
 | get\_name | Pure virtual function, must be override by the client.  get the system name. |
 | get\_system\_type\_RTTI | Pure virtual function, override by the system class. get the system type at runtime \(for plugins\).  |
 | [mark](shiva-ecs.md#mark) | mark the system |
-| unmark | unmark the system |
-| is\_marked | check if the system is marked. |
-| enable | enable the system |
-| disable | disable the system |
-| is\_enabled | check if the system is enabled. |
-| im\_a\_plugin | defines the system as a plugin. |
-| is\_a\_plugin | check if the system is a plugin. |
+| [unmark](shiva-ecs.md#unmark) | unmark the system |
+| [is\_marked](shiva-ecs.md#is_marked) | check if the system is marked. |
+| [enable](shiva-ecs.md#enable) | enable the system |
+| [disable](shiva-ecs.md#disable) | disable the system |
+| [is\_enabled](shiva-ecs.md#is_enabled) | check if the system is enabled. |
+| [im\_a\_plugin](shiva-ecs.md#im_a_plugin) | defines the system as a plugin. |
+| [is\_a\_plugin](shiva-ecs.md#is_a_plugin) | check if the system is a plugin. |
 {% endtab %}
 {% endtabs %}
 
@@ -424,4 +424,14 @@ bool is_marked() const noexcept
 **Return value**
 
 * **true** if the system is marked, **false** otherwise
+
+#### enable
+
+#### disable
+
+#### is\_enabled
+
+#### im\_a\_plugin
+
+#### is\_a\_plugin
 
