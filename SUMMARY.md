@@ -22,6 +22,8 @@
     * [shiva::world](shiva/modules/shiva-world.md)
     * [shiva::sfml](shiva/modules/shiva-sfml/README.md)
       * [shiva::system-sfml-graphics](shiva/modules/shiva-sfml/shiva-system-sfml-graphics.md)
+      * [shiva::system-sfml-inputs](shiva/modules/shiva-sfml/shiva-system-sfml-inputs.md)
+      * [shiva::system-sfml-resources](shiva/modules/shiva-sfml/shiva-system-sfml-resources.md)
     * [shiva::pyscripting](shiva/modules/shiva-pyscripting.md)
     * [shiva::lua](shiva/modules/shiva-lua.md)
   * [Tutorial](shiva/tutorial/README.md)
