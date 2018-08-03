@@ -25,6 +25,12 @@ Currently on **Windows**, only the shared build is supported by shiva
 $ ./vcpkg install shiva
 ```
 
+**OSX:**
+
+```text
+./vcpkg install shiva
+```
+
 {% hint style="info" %}
 To install vcpkg follow the instructions on the following github:  
 [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg)
