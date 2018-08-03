@@ -15,6 +15,10 @@ If you want to install shiva you have two possibilities:
 $ ./vcpkg.exe install shiva:x64-Windows
 ```
 
+{% hint style="warning" %}
+Currently on **Windows**, only the shared build is supported by shiva
+{% endhint %}
+
 #### Linux:
 
 ```text

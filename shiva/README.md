@@ -11,7 +11,7 @@ It is based on an architecture of [modules](modules/) that can be used separatel
 ## Project Status:
 
 | Categories | Badge Status |
-| :---: | :---: |
+| :--- | :--- |
 | Coverage Head | [![Coverage Status](https://coveralls.io/repos/github/Milerius/shiva/badge.svg)](https://coveralls.io/github/Milerius/shiva) |
 | Coverage Master | [![Coverage Status](https://coveralls.io/repos/github/Milerius/shiva/badge.svg?branch=master)](https://coveralls.io/github/Milerius/shiva?branch=master) |
 | AppVeyor Windows | [![Build status](https://ci.appveyor.com/api/projects/status/krqog6tiv34kk0gd?svg=true)](https://ci.appveyor.com/project/Milerius/shiva) |

@@ -120,7 +120,7 @@ explicit system_manager(entt::dispatcher &dispatcher,
 
 {% tab title="Functions" %}
 | Function Name | Description |
-| --- | :---: |
+| :--- | :--- |
 | [update](shiva-ecs.md#update) | update the systems |
 | [get\_system](shiva-ecs.md#get_system) | get a single system |
 | [get\_systems](shiva-ecs.md#get_systems) | get multiple systems |
@@ -416,7 +416,7 @@ explicit base_system(entt::dispatcher &dispatcher,
 
 {% tab title="Functions" %}
 | Function Name | Description |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | update | Pure virtual function, must be overriden by the client.  update the system. |
 | get\_name | Pure virtual function, must be overriden by the client.  get the system name. |
 | get\_system\_type\_RTTI | Pure virtual function, override by the system class. get the system type at runtime \(for plugins\).  |
@@ -549,7 +549,7 @@ class system : public base_system;
 
 {% tab title="Functions" %}
 | Function Name | Description |
-| --- | --- | --- | --- | --- |
+| :--- | :--- |
 | update | Pure virtual function, must be overriden by the client. update the system. |
 | [get\_system\_type](shiva-ecs.md#get_system_type) | get the system type at compile time |
 | [get\_system\_type\_RTTI](shiva-ecs.md#get_system_type_rtti) | get the system type at runtime |
