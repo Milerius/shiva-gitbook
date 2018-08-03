@@ -28,16 +28,37 @@ $ ./vcpkg.exe install shiva-sfml:x64-Windows
 Currently on **Windows**, only the shared build is supported by shiva
 {% endhint %}
 
-#### Linux:
+#### Linux/OSX:
 
 ```text
 $ ./vcpkg install shiva
 ```
 
-**OSX:**
+**Linux/OSX \(plugins\):**
 
 ```text
-./vcpkg install shiva
+$ ./vcpkg.exe install shiva-(plugins_name)
+
+##! example
+$ ./vcpkg.exe install shiva-sfml
+```
+
+{% hint style="info" %}
+On **Linux** and **OSX** some extra commands are needed to install lua modules and sfml.
+{% endhint %}
+
+**Linux/OSX** **\(extras\):**
+
+```bash
+##! Linux
+sudo apt-get install luarocks
+luarocks install luafilesystem
+sudo apt-get install libsfml2.5-dev (or manually install sfml 2.5.0)
+
+##! OSX
+brew install luarocks
+brew install sfml
+luarocks install luafilesystem
 ```
 
 {% hint style="info" %}
