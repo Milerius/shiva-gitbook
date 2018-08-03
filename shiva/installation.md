@@ -15,6 +15,15 @@ If you want to install shiva you have two possibilities:
 $ ./vcpkg.exe install shiva:x64-Windows
 ```
 
+**Windows \(plugins\):**
+
+```text
+$ ./vcpkg.exe install shiva-(plugins_name):x64-Windows
+
+##! example
+$ ./vcpkg.exe install shiva-sfml:x64-Windows
+```
+
 {% hint style="warning" %}
 Currently on **Windows**, only the shared build is supported by shiva
 {% endhint %}
