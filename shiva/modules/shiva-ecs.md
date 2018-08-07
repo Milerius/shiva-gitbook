@@ -134,6 +134,7 @@ explicit system_manager(entt::dispatcher &dispatcher,
 | [disable\_systems](shiva-ecs.md#disable_systems) | disable multiple systems |
 | [create\_system](shiva-ecs.md#create_system) | create a single system |
 | [load\_systems](shiva-ecs.md#load_systems) | create multiple systems |
+| [nb\_systems](shiva-ecs.md#nb_systems) | get the number of systems |
 {% endtab %}
 {% endtabs %}
 
