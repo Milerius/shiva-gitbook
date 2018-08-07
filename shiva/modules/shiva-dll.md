@@ -23,7 +23,7 @@ class plugins_registry;
 
 {% tab title="Constructor" %}
 ```cpp
-explicit plugins_registry(shiva::fs::path &&plugins_directory) noexcept;
+explicit plugins_registry(shiva::fs::path &&plugins_directory, const std::string library_pattern_matching) noexcept;
 ```
 {% endtab %}
 
