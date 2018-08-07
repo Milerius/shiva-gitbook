@@ -383,6 +383,23 @@ std::tuple<std::add_lvalue_reference_t<std::add_const_t<Systems>>...> load_syste
 This function calls [get\_systems](shiva-ecs.md#get_systems) and can therefore potentially **throw**
 {% endhint %}
 
+#### nb\_systems
+
+```cpp
+size_t nb_systems() const noexcept;
+
+size_t nb_systems(system_type sys_type) const noexcept;
+```
+
+#### Parameters
+
+* \(second overload\) **sys\_type** represent the type of systems
+
+#### Return value
+
+* \(first overload\) number of systems
+* \(second overload\) number of systems of a specific type
+
 ## base\_system
 
 {% hint style="danger" %}
