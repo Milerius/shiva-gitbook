@@ -34,7 +34,7 @@ explicit plugins_registry(shiva::fs::path &&plugins_directory, const std::string
 * **library\_pattern\_matching** represents a basic pattern to respect for libraries to load
 
 {% hint style="warning" %}
-For example if the pattern is \[shiva-system\] then only libraries that have \[shiva-system\] in their names will be loaded. \[libshiva-system-plugin.so\] will be loaded \[libother-things.so\] will not be loaded.
+For example if the pattern is \[**shiva-system**\] then only libraries that have \[**shiva-system**\] in their names will be loaded. \[**libshiva-system-plugin.so**\] will be loaded \[**libother-things.so**\] will not be loaded.
 {% endhint %}
 {% endtab %}
 
