@@ -136,6 +136,7 @@ explicit system_manager(entt::dispatcher &dispatcher,
 | [load\_systems](shiva-ecs.md#load_systems) | create multiple systems |
 | [nb\_systems](shiva-ecs.md#nb_systems) | get the number of systems |
 | [load\_plugins](shiva-ecs.md#load_plugins) | load plugins and add it as systems |
+| [get\_system\_by\_name](shiva-ecs.md#get_system_by_name) | get a single system by his name |
 {% endtab %}
 {% endtabs %}
 
@@ -415,6 +416,16 @@ bool load_plugins() noexcept;
 #### Notes
 
 This function allow you to load the plugins of the plugins\_registry and create systems with the creator function of each plugins.
+
+#### get\_system\_by\_name
+
+```cpp
+const base_system *get_system_by_name(std::string system_name,
+                                      shiva::ecs::system_type type) const noexcept;
+                                      
+base_system *get_system_by_name(std::string system_name,
+                                shiva::ecs::system_type type) noexcept;
+```
 
 ## base\_system
 
