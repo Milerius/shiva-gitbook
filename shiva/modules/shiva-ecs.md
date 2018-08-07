@@ -427,6 +427,19 @@ base_system *get_system_by_name(std::string system_name,
                                 shiva::ecs::system_type type) noexcept;
 ```
 
+#### Parameters
+
+* **system\_name** name of the system to get
+* **type** system\_type of the system to get
+
+**Return value**
+
+* a pointer to the base system which match this name, nullptr otherwise.
+
+**Notes**
+
+* This function allow you to get a system by his name, used for get a specific plugin for example.
+
 ## base\_system
 
 {% hint style="danger" %}
