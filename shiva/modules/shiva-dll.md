@@ -108,9 +108,23 @@ plugins_registry_.apply_on_each_symbols(functor);
 
 | Functions Name | Description |
 | :--- | :--- |
-| is\_shared\_library |  |
+| [is\_shared\_library](shiva-dll.md#is_shared_library) | check if a specific path is a shared library |
 
-#### is\_shared\_library
+####  is\_shared\_library
 
+```cpp
+static inline bool is_shared_library(const fs::path &path) noexcept;
+```
 
+#### Parameters
+
+* **path** the path to be tested
+
+#### Return value
+
+* `true` if the path is a shared\_library, `false` otherwise.
+
+#### Notes
+
+* check if the **path** passed in parameter is a shared library
 
