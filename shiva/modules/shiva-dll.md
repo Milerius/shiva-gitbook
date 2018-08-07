@@ -104,3 +104,13 @@ auto functor = [this](auto &&symbol) {
 plugins_registry_.apply_on_each_symbols(functor);
 ```
 
+## helpers
+
+| Functions Name | Description |
+| :--- | :--- |
+| is\_shared\_library |  |
+
+#### is\_shared\_library
+
+
+
