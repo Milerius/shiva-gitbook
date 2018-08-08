@@ -16,7 +16,7 @@ namespace shiva::entt
     {
     public:
         //! Reflection
-        reflect_class(entity_registry);
+        reflect_class(entity_registry)
 
         using base_class_t = ::entt::DefaultRegistry;
 
@@ -24,6 +24,7 @@ namespace shiva::entt
         {
             using namespace std::string_view_literals;
             return meta::makeMap("destroy"sv, &entity_registry::destroy_entity,
+                                 reflect_function(&entity_registry::valid),
                                  reflect_function(&entity_registry::create));
         }
 
