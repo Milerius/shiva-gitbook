@@ -568,7 +568,38 @@ bool is_a_plugin() const noexcept
 
 #### get\_user\_data
 
+```cpp
+void *get_user_data() noexcept;
+```
+
+**Return value**
+
+* user data of a system \(`nullptr` by default\) 
+
+{% hint style="warning" %}
+* This function retrieve a user data previously set by [set\_user\_data](shiva-ecs.md#set_user_data)
+*  by default a user\_data is a void pointer equal to `nullptr`.
+{% endhint %}
+
 #### set\_user\_data
+
+```cpp
+void set_user_data(void *data) noexcept;
+```
+
+#### Parameters
+
+* `data` a void pointer representing the user data
+
+{% hint style="info" %}
+* This function set a user data for this system
+* This function is very usefull to transfer \(with [get\_user\_data](shiva-ecs.md#get_user_data)\) data between plugins since they are base\_class.
+* This function will call on\_set\_user\_data callback at the epilogue, by default on\_set\_user\_data is empty and you need to override it if you need it.
+{% endhint %}
+
+{% hint style="warning" %}
+* user should be aware here, that's manipulating void pointer is as your own risk.
+{% endhint %}
 
 ## system
 
