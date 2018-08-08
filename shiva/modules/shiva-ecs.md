@@ -616,9 +616,18 @@ This class is the class you will have to inherit to create your systems
 {% tabs %}
 {% tab title="Signature" %}
 ```cpp
-template <typename SystemDerived, typename TSystemType>
+template <typename TSystemDerived, typename TSystemType>
 class system : public base_system;
 ```
+
+**Template Parameters**
+
+* **TSystemDerived** CRTP implementation of the system
+* **TSystemType** Strong type representing the [system\_type](shiva-ecs.md#system_type) of the implemented system
+
+{% hint style="success" %}
+* This class is the class you will have to inherit to create your systems
+{% endhint %}
 {% endtab %}
 
 {% tab title="Constructor" %}
