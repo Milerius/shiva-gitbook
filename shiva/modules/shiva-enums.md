@@ -5,6 +5,8 @@
 The `ENUM` macro allows preprocessor-based generation of reflective enumerations. These enumerations can be easily converted back and forth to strings. It is also possible to iterate through the available values of such an enumeration type.
 
 ```cpp
+#include <shiva/enums/enums.hpp>
+
 ENUM(AnEnum, VALUE_A, VALUE_B);
 
 AnEnum v(AnEnum::VALUE_A);
