@@ -185,16 +185,16 @@ TSystem &get_system();
 #### get\_systems
 
 ```cpp
-template <typename ...Systems>
+template <typename ...TSystems>
 std::tuple<std::add_lvalue_reference_t<TSystems>...> get_systems();
 
-template <typename ...Systems>
+template <typename ...TSystems>
 std::tuple<std::add_lvalue_reference_t<std::add_const_t<TSystems>>...> get_systems() const
 ```
 
 **Template parameters**
 
-* **Systems** Represents a list of systems to get
+* **TSystems** Represents a list of systems to get
 
 **Return value**
 
@@ -222,13 +222,13 @@ bool has_system() const noexcept;
 #### has\_systems
 
 ```cpp
-template <typename ... Systems>
+template <typename ... TSystems>
 bool has_systems() const noexcept
 ```
 
 **Template parameters**
 
-* **Systems** Represents a list of systems that needs to be verified
+* **TSystems** Represents a list of systems that needs to be verified
 
 **Return value**
 
@@ -260,13 +260,13 @@ This function marks a system that will be destroyed at the next turn of the game
 #### mark\_systems
 
 ```cpp
- template <typename ... Systems>
+ template <typename ... TSystems>
  bool mark_systems() noexcept
 ```
 
 **Template parameters**
 
-* **Systems** Represents a list of systems that needs to be marked
+* **TSystems** Represents a list of systems that needs to be marked
 
 **Return value**
 
@@ -294,13 +294,13 @@ bool enable_system() noexcept
 #### **enable\_systems**
 
 ```cpp
-template <typename ... Systems>
+template <typename ... TSystems>
 bool enable_systems() noexcept
 ```
 
 **Template parameters**
 
-* **Systems** Represents a list of systems that needs to be enabled
+* **TSystems** Represents a list of systems that needs to be enabled
 
 **Return value**
 
@@ -332,13 +332,13 @@ If you deactivate a system, it will not be destroyed but simply ignore during th
 #### disable\_systems
 
 ```cpp
- template <typename ... Systems>
+ template <typename ... TSystems>
  bool disable_systems() noexcept
 ```
 
 #### Template parameters
 
-* **Systems** Represents a list of systems that needs to be disabled
+* **TSystems** Represents a list of systems that needs to be disabled
 
 **Return value**
 
@@ -351,14 +351,14 @@ This function recursively calls the [disable\_system](shiva-ecs.md#disable_syste
 #### create\_system
 
 ```cpp
-template <typename TSystem, typename ... SystemArgs>
-TSystem &create_system(SystemArgs &&...args)
+template <typename TSystem, typename ... TSystemArgs>
+TSystem &create_system(TSystemArgs &&...args)
 ```
 
 #### Template parameters
 
 * **TSystem** represents the type of system to create
-* **SystemArgs** represents the arguments needed to construct the system to create
+* **TSystemArgs** represents the arguments needed to construct the system to create
 
 #### Return value
 
@@ -368,10 +368,10 @@ TSystem &create_system(SystemArgs &&...args)
 
 ```cpp
 template <typename ...TSystems>
-std::tuple<std::add_lvalue_reference_t<Systems>...> load_systems()
+std::tuple<std::add_lvalue_reference_t<TSystems>...> load_systems()
 
 template <typename ...TSystems>
-std::tuple<std::add_lvalue_reference_t<std::add_const_t<Systems>>...> load_systems()
+std::tuple<std::add_lvalue_reference_t<std::add_const_t<TSystems>>...> load_systems()
 ```
 
 **Template parameters**
