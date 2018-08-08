@@ -1,7 +1,7 @@
 ---
 description: >-
   In this page you will find all the information you need on the ecs part of
-  shiva, the api of the different class, the game loop architecture.
+  shiva, the api of the different classes, the game loop architecture.
 ---
 
 # shiva::ecs
@@ -10,13 +10,13 @@ description: >-
 
 ### Systems
 
-Shiva have 3 different kinds of systems:
+Shiva has 3 different kinds of systems:
 
 * **PreUpdate**: These systems are the first to be updated in the game loop, they are generally used to retrieve user input, or manage network events for example.
 * **LogicUpdate**: These systems are the second to be updated in the game loop, they are generally used for game logic such as movement or collisions for example.
 * **PostUpdate**: These systems are the last to be updated in the game loop, they are generally used for rendering or interpolation for example.
 
-The pseudo code will look like this:
+The pseudo code look like this:
 
 ```typescript
 function update()
@@ -89,7 +89,7 @@ using system_logic_update = NamedType<system_type, struct system_logic_update_ta
 
 ### Description
 
-This class will manage the **systems** of the entity component system. You will be able to `add`, `remove`, `retrieve` , `update` or `delete` systems through it.
+This class manage the **systems** of the entity component system. You are able to `add`, `remove`, `retrieve` , `update` or `delete` systems through it.
 
 ### Diagram
 
@@ -152,12 +152,12 @@ size_t update() noexcept
 
 **Notes**
 
-This is the function that will update your **systems**. Based on the logic of the different kinds of [shiva systems](shiva-ecs.md#how-works-the-system), this function will take care of updating your systems in the right order.
+This is the function that update your **systems**. Based on the logic of the different kinds of [shiva systems](shiva-ecs.md#how-works-the-system), this function take care of updating your systems in the right order.
 
 {% hint style="info" %}
-If you have not loaded any system into the **system\_manager** the function will return 0.
+If you have not loaded any system into the **system\_manager** the function return 0.
 
-If you decide to mark a system, it will be automatically **deleted** at the next loop turn through this function.
+If you decide to mark a system, it will be automatically **deleted** at the next loop tick through this function.
 {% endhint %}
 
 #### get\_system
@@ -254,7 +254,7 @@ This function recursively calls the [has\_system](shiva-ecs.md#has_system) funct
 * **true** if the system has been marked, **false** otherwise
 
 {% hint style="info" %}
-This function marks a system that will be destroyed at the next turn of the game loop.
+This function marks a system that will be destroyed at the next tick of the game loop.
 {% endhint %}
 
 #### mark\_systems
@@ -497,7 +497,7 @@ void mark() noexcept
 ```
 
 {% hint style="info" %}
-This function marks the system, it will be destroyed in the next turn of the [game loop](shiva-ecs.md#diagram) by the [system\_manager](shiva-ecs.md#system_manager).
+This function marks the system, it will be destroyed in the next tick of the [game loop](shiva-ecs.md#diagram) by the [system\_manager](shiva-ecs.md#system_manager).
 {% endhint %}
 
 #### unmark
@@ -507,7 +507,7 @@ void unmark() noexcept
 ```
 
 {% hint style="info" %}
-This function unmark the system, allows the prevention of a destruction in the next turn of the [game loop](shiva-ecs.md#diagram) by the [system\_manager](shiva-ecs.md#system_manager).
+This function unmark the system, allows the prevention of a destruction in the next tick of the [game loop](shiva-ecs.md#diagram) by the [system\_manager](shiva-ecs.md#system_manager).
 {% endhint %}
 
 #### is\_marked
@@ -553,7 +553,7 @@ void im_a_plugin() noexcept
 ```
 
 {% hint style="info" %}
-This function defines the system as a plugin, and therefore will use more feature in runtime to work properly
+This function defines the system as a plugin, and therefore use more feature in runtime to work properly
 {% endhint %}
 
 #### is\_a\_plugin
@@ -593,8 +593,8 @@ void set_user_data(void *data) noexcept;
 
 {% hint style="info" %}
 * This function set a user data for this system
-* This function is very usefull to transfer \(with [get\_user\_data](shiva-ecs.md#get_user_data)\) data between plugins since they are base\_class.
-* This function will call on\_set\_user\_data callback at the epilogue, by default on\_set\_user\_data is empty and you need to override it if you need it.
+* This function is very useful to transfer \(with [get\_user\_data](shiva-ecs.md#get_user_data)\) data between plugins since they are base\_class.
+* This function wcall on\_set\_user\_data callback at the epilogue, by default on\_set\_user\_data is empty and you need to override it if you need it.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -605,7 +605,7 @@ void set_user_data(void *data) noexcept;
 
 ### Description
 
-This class is the class you will have to inherit to create your systems
+This class is the class that you have to inherit to create your systems
 
 ### Diagram
 
