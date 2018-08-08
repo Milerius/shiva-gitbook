@@ -670,6 +670,14 @@ using pre_update_system = system<TSystemDerived, system_pre_update>;
 template <typename TSystemDerived>
 using post_update_system = system<TSystemDerived, system_post_update>;
 ```
+
+#### Usage
+
+```cpp
+class system_implementation : public logic_update_system<system_implementation>
+{
+};
+```
 {% endtab %}
 {% endtabs %}
 
