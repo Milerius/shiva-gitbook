@@ -485,8 +485,8 @@ explicit base_system(entt::dispatcher &dispatcher,
 | [is\_enabled](shiva-ecs.md#is_enabled) | check if the system is enabled. |
 | [im\_a\_plugin](shiva-ecs.md#im_a_plugin) | defines the system as a plugin. |
 | [is\_a\_plugin](shiva-ecs.md#is_a_plugin) | check if the system is a plugin. |
-| get\_user\_data | retrieve a user data previously set by set\_user\_data |
-| set\_user\_data | set a user data for the system |
+| [get\_user\_data](shiva-ecs.md#get_user_data) | retrieve a user data previously set by set\_user\_data |
+| [set\_user\_data](shiva-ecs.md#set_user_data) | set a user data for the system |
 {% endtab %}
 {% endtabs %}
 
@@ -565,6 +565,10 @@ bool is_a_plugin() const noexcept
 **Return value**
 
 * **true** if the system is a plugin, **false** otherwise
+
+#### get\_user\_data
+
+#### set\_user\_data
 
 ## system
 
