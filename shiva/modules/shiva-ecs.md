@@ -325,7 +325,7 @@ This function recursively calls the [has\_system](shiva-ecs.md#has_system) funct
 
 | Possible name | Description |
 | :--- | :--- |
-| result | `boolean` |
+| _**result**_ | `boolean` |
 
 **Example**
 
@@ -384,11 +384,30 @@ bool enable_system() noexcept
 
 **Template parameters**
 
-* **TSystem** Represents the system that needs to be enabled.
+| Name | Description |
+| :--- | :--- |
+| _**TSystem**_ | `TSystem` |
 
 **Return value**
 
-* **true** if the system has been enabled, **false** otherwise
+| Possible name | Description |
+| :--- | :--- |
+| _**result**_ | `boolean` |
+
+**Example**
+
+```cpp
+bool result = system_manager.enable_system<my_game::render>();
+
+if (!result) {
+    //! Oh no, this system cannot be enabled.
+    //! Did you enable a system that is not present in the system_manager?
+}
+```
+
+{% hint style="info" %}
+by default, a system is enabled.
+{% endhint %}
 
 #### **enable\_systems**
 
