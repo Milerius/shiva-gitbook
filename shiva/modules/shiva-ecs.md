@@ -255,11 +255,24 @@ bool has_system() const noexcept;
 
 **Template parameters**
 
-* **TSystem** Represents the system that needs to be verified
+| Name | Description |
+| :--- | :--- |
+| _**TSystem**_ | `TSystem` |
 
 **Return value**
 
-* **true** if the system has been  loaded, **false** otherwise
+| Possible name | Description |
+| :--- | :--- |
+| _**result**_ | `boolean` |
+
+**Example**
+
+```cpp
+bool result = system_manager.has_system<my_game::render_system>();
+if (!result) {
+    //! Oh no, i don't have a rendering system.
+}
+```
 
 #### has\_systems
 
