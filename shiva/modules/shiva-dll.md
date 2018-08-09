@@ -149,7 +149,7 @@ static inline bool is_shared_library(const fs::path &path) noexcept;
 
 | Possible name | Description |
 | :--- | :--- |
-| result | `boolean`      - **true** if the path is a shared\_library    - **false** otherwise |
+| _**result**_ | `boolean`  |
 
 **Example**
 
