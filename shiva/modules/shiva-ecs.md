@@ -325,7 +325,7 @@ This function recursively calls the [has\_system](shiva-ecs.md#has_system) funct
 
 | Possible name | Description |
 | :--- | :--- |
-| result | boolean |
+| result | `boolean` |
 
 **Example**
 
@@ -351,11 +351,25 @@ This function marks a system that will be destroyed at the next tick of the game
 
 **Template parameters**
 
-* **TSystems** Represents a list of systems that needs to be marked
+| Name | Description |
+| :--- | :--- |
+| _**TSystems**_ | `TSystems` |
 
 **Return value**
 
-* **true** if  the list of systems has been marked, **false** otherwise
+| Possible name | Description |
+| :--- | :--- |
+| _**result**_ | `boolean` |
+
+**Example**
+
+```cpp
+bool result = system_manager.mark_systems<my_game::render, my_game::audio>();
+
+if (!result) {
+    //! Oh no, atleast one of the system has not been marked.
+}
+```
 
 {% hint style="info" %}
 This function recursively calls the [mark\_system](shiva-ecs.md#mark_systems) function
