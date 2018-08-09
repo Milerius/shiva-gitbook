@@ -55,7 +55,7 @@ bool load_all_symbols() noexcept;
 
 **Return value**
 
-| Possible Name | Description |
+| Possible name | Description |
 | :--- | :--- |
 | _success_ | `boolean`      - **true** if all the symbols of all the libraries have been correctly loaded    - **false** if a symbol from one of the libraries was not loaded     - **false** if the plugins\_directory doesn't exist |
 
@@ -86,22 +86,31 @@ size_t nb_plugins() const noexcept;
 
 **Return value**
 
-* numbers of plugins
+| Possible name | Description |
+| :--- | :--- |
+| nb\_plugins | `size_t`       - numbers of plugins |
+
+**Example**
+
+```cpp
+size_t nb_plugins = plugins_registry.nb_plugins();
+if (nb_plugins < 4) {
+    //! Oh no, i was exepcting at least 4 plugins
+}
+```
 
 #### **apply\_on\_each\_symbols**
 
 ```cpp
-template <typename Functor>
-void apply_on_each_symbols(Functor &&functor);
+template <typename TFunctor>
+void apply_on_each_symbols(TFunctor &&functor);
 ```
 
 **Template parameters**
 
-* **Functor** Represents the functor to apply on each of the loaded symbols.
-
-**Notes**
-
-* This function applies the **functor** as a parameter to each of the symbols that were previously loaded by the [load\_all\_symbols ](https://shiva.gitbook.io/project/shiva/modules/shiva-dll#load_all_symbols)function.
+| Name | Description |
+| :--- | :--- |
+| functor | `TFunctor`       - Represents the functor to apply on each of the loaded symbols. |
 
 **Example**
 
@@ -113,6 +122,10 @@ auto functor = [this](auto &&symbol) {
 
 plugins_registry_.apply_on_each_symbols(functor);
 ```
+
+**Notes**
+
+* This function applies the **functor** as a parameter to each of the symbols that were previously loaded by the [load\_all\_symbols ](https://shiva.gitbook.io/project/shiva/modules/shiva-dll#load_all_symbols)function.
 
 ## helpers
 
