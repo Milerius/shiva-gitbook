@@ -148,7 +148,18 @@ size_t update() noexcept
 
 **Return value**
 
-* number of systems successfully updated
+| Possible Name | Description |
+| :--- | :--- |
+| _**nb\_systems\_updated**_ | `size_t`      - number of systems successfully updated |
+
+**Example**
+
+```cpp
+size_t nb_systems_updated = system_manager.update();
+if (nb_systems_updated != 5) {
+    /* Oh no, i was expected 5 systems to be executed in this game loop tick */
+}
+```
 
 **Notes**
 
