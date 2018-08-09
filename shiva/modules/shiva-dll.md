@@ -116,8 +116,10 @@ void apply_on_each_symbols(TFunctor &&functor);
 
 ```cpp
 auto functor = [this](auto &&symbol) {
-                auto res = symbol(//things);
-                // manipulate res
+                auto res = symbol(/* parmeters for the creation of the object */);
+                // res -> object created by the symbol creator
+                // manipulate res or put it in a container for example.
+                this->container_object.push_back(std::move(res));
             };
 
 plugins_registry_.apply_on_each_symbols(functor);
