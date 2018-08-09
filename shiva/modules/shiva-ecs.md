@@ -191,7 +191,7 @@ TSystem &get_system();
 
 | Possible name | Description |
 | :--- | :--- |
-| system | `TSystem &const TSystem &` |
+| _**render\_system, log\_system**_ | `TSystem &const TSystem &` |
 
 {% hint style="danger" %}
 **Throw** a `std::logic_error` if the system could not be obtained correctly or if it was never loaded.
@@ -317,11 +317,26 @@ This function recursively calls the [has\_system](shiva-ecs.md#has_system) funct
 
 **Template parameters**
 
-* **TSystem** Represents the system that needs to be marked
+| Name | Description |
+| :--- | :--- |
+| _**TSystem**_ | `TSystem` |
 
 **Return value**
 
-* **true** if the system has been marked, **false** otherwise
+| Possible name | Description |
+| :--- | :--- |
+| result | boolean |
+
+**Example**
+
+```cpp
+bool result = system_manager.mark_system<my_game::render>();
+
+if (!result) {
+    //! Oh no the system has not been marked.
+    //! Did you mark a system that is not present in the system_manager?
+}
+```
 
 {% hint style="info" %}
 This function marks a system that will be destroyed at the next tick of the game loop.
