@@ -4,8 +4,8 @@
 
 ### **Description**
 
-This class will allow you to store plugin creation symbols through its template _**CreatorSignature**_ parameter.  
-Through this class you will be able to retrieve the number of plugins, apply a functor on each of the symbols \(as creates the plugin for example\).
+This class allows you to store plugin creation symbols through its template _**CreatorSignature**_ parameter.  
+Through this class you are able to retrieve the number of plugins, apply a functor on each of the symbols \(as creates the plugin for example\).
 
 ### Diagram
 
@@ -65,7 +65,7 @@ The symbols are **loaded recursively** from the folder you specified in the obje
 
 {% hint style="warning" %}
 If one of the symbols could not be correctly loaded the **function does not stop** and proceeds to load the next plugin.  
-If when browsing folders a corrupted file is spotted the function will switch to **loading the next plugin**.
+If when browsing folders a corrupted file is spotted the function switch to **loading the next plugin**.
 {% endhint %}
 
 #### **nb\_plugins**
