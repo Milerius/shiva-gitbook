@@ -183,15 +183,29 @@ TSystem &get_system();
 
 **Template parameters**
 
-* **TSystem** Represents the system to get
+| Name | Description |
+| :--- | :--- |
+| _**TSystem**_ | `TSystem`  |
 
 **Return value**
 
-* **TSystem&** Return a reference to the system obtained
+| Possible name | Description |
+| :--- | :--- |
+| system | `TSystem &const TSystem &` |
 
 {% hint style="danger" %}
 **Throw** a `std::logic_error` if the system could not be obtained correctly or if it was never loaded.
 {% endhint %}
+
+**Example**
+
+```cpp
+//! Non const version
+auto& render_system = system_manager.get_system<game::render_system>();
+
+//! const version
+const auto& log_system = system_manager.get_system<game::log_system>();
+```
 
 #### get\_systems
 
