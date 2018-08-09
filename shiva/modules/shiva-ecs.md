@@ -219,11 +219,25 @@ std::tuple<std::add_lvalue_reference_t<std::add_const_t<TSystems>>...> get_syste
 
 **Template parameters**
 
-* **TSystems** Represents a list of systems to get
+| Name | Description |
+| :--- | :--- |
+| _**TSystems**_ | `TSystems` |
 
 **Return value**
 
-* **Tuple** of  systems obtained. 
+| Possible name | Description |
+| :--- | :--- |
+| _**systems**_, \[_**system\_foo**_, _**system\_bar**_\] | `Tuple<TSystems &>Tuple<const TSystems &>` |
+
+**Example**
+
+```cpp
+// Called from a const context
+auto[test_sys, another_test_sys] = system_manager_.get_systems<test_system, another_test_system>();
+
+// Called from a non const context
+auto[test_sys_nc, another_test_sys_nc] = system_manager_.get_systems<test_system, another_test_system>();
+```
 
 {% hint style="info" %}
 This function recursively calls the [get\_system](shiva-ecs.md#get_systems) function
