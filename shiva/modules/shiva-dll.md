@@ -57,7 +57,7 @@ bool load_all_symbols() noexcept;
 
 | Possible name | Description |
 | :--- | :--- |
-| _success_ | `boolean`      - **true** if all the symbols of all the libraries have been correctly loaded    - **false** if a symbol from one of the libraries was not loaded     - **false** if the plugins\_directory doesn't exist |
+| _**success**_ | `boolean`      - **true** if all the symbols of all the libraries have been correctly loaded    - **false** if a symbol from one of the libraries was not loaded     - **false** if the plugins\_directory doesn't exist |
 
 **Example**
 
@@ -88,7 +88,7 @@ size_t nb_plugins() const noexcept;
 
 | Possible name | Description |
 | :--- | :--- |
-| nb\_plugins | `size_t`       - numbers of plugins |
+| _**nb\_plugins**_ | `size_t`       - numbers of plugins |
 
 **Example**
 
@@ -110,7 +110,7 @@ void apply_on_each_symbols(TFunctor &&functor);
 
 | Name | Description |
 | :--- | :--- |
-| functor | `TFunctor`       - Represents the functor to apply on each of the loaded symbols. |
+| _**functor**_ | `TFunctor`       - represents the functor to apply on each of the loaded symbols. |
 
 **Example**
 
@@ -141,11 +141,29 @@ static inline bool is_shared_library(const fs::path &path) noexcept;
 
 #### Parameters
 
-* **path** the path to be tested
+| Name | Description |
+| :--- | :--- |
+| _**path**_ | `fs::path`      - the path to be tested |
 
 #### Return value
 
-* `true` if the path is a shared\_library, `false` otherwise.
+| Possible name | Description |
+| :--- | :--- |
+| result | `boolean`      - **true** if the path is a shared\_library    - **false** otherwise |
+
+**Example**
+
+```cpp
+// result is true
+bool result = shiva::helpers::is_shared_library(shiva::fs::path("path/libfoo.so"));
+
+// result is false
+result = shiva::helpers::is_shared_library(shiva::fs::path("path/libbar"));
+
+if (!result) {
+   /* The path given as parameter doesn't seem's to be a shared_library */
+}
+```
 
 #### Notes
 
