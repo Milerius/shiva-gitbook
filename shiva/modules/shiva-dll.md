@@ -57,7 +57,7 @@ bool load_all_symbols() noexcept;
 
 | Possible name | Description |
 | :--- | :--- |
-| _**success**_ | `boolean`      - **true** if all the symbols of all the libraries have been correctly loaded    - **false** if a symbol from one of the libraries was not loaded     - **false** if the plugins\_directory doesn't exist |
+| _**success**_ | `boolean`  |
 
 **Example**
 
@@ -88,7 +88,7 @@ size_t nb_plugins() const noexcept;
 
 | Possible name | Description |
 | :--- | :--- |
-| _**nb\_plugins**_ | `size_t`       - numbers of plugins |
+| _**nb\_plugins**_ | `size_t`  |
 
 **Example**
 
@@ -110,7 +110,7 @@ void apply_on_each_symbols(TFunctor &&functor);
 
 | Name | Description |
 | :--- | :--- |
-| _**functor**_ | `TFunctor`       - represents the functor to apply on each of the loaded symbols. |
+| _**functor**_ | `TFunctor`  |
 
 **Example**
 
@@ -143,7 +143,7 @@ static inline bool is_shared_library(const fs::path &path) noexcept;
 
 | Name | Description |
 | :--- | :--- |
-| _**path**_ | `fs::path`      - the path to be tested |
+| _**path**_ | `fs::path`  |
 
 #### Return value
 

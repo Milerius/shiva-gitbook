@@ -150,7 +150,7 @@ size_t update() noexcept
 
 | Possible Name | Description |
 | :--- | :--- |
-| _**nb\_systems\_updated**_ | `size_t`      - number of systems successfully updated |
+| _**nb\_systems\_updated**_ | `size_t`  |
 
 **Example**
 
