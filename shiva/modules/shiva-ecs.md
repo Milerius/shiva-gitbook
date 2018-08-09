@@ -283,11 +283,26 @@ bool has_systems() const noexcept
 
 **Template parameters**
 
-* **TSystems** Represents a list of systems that needs to be verified
+| Name | Description |
+| :--- | :--- |
+| _**TSystems**_ | `TSystems` |
 
 **Return value**
 
-* **true** if the list of systems has been loaded, **false** otherwise
+| Possible name | Description |
+| :--- | :--- |
+| _**result**_ | `boolean` |
+
+**Example**
+
+```cpp
+bool result = system_manager.has_systems<my_game::render_system,
+                                         my_game::audio_system>();
+
+if (!result) {
+  //! Oh no, atleast one of the systems is not present
+}
+```
 
 {% hint style="info" %}
 This function recursively calls the [has\_system](shiva-ecs.md#has_system) function
