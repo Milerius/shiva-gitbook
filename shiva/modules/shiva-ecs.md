@@ -418,11 +418,23 @@ bool enable_systems() noexcept
 
 **Template parameters**
 
-* **TSystems** Represents a list of systems that needs to be enabled
+| Name | Description |
+| :--- | :--- |
+| _**TSystems**_ | `TSystems` |
 
 **Return value**
 
-* **true** if the list of systems has been enabled, **false** otherwise
+| Possible name | Description |
+| :--- | :--- |
+| _**result**_ | `boolean` |
+
+```cpp
+bool result = system_manager.enable_systems<my_game::render, my_game::audio>();
+
+if (!result) {
+    //! Oh no, atleast one of the requested systems cannot be enabled.
+}
+```
 
 {% hint style="info" %}
 This function recursively calls the [enable\_system](shiva-ecs.md#enable_system) function
