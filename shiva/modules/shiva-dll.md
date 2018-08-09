@@ -55,8 +55,18 @@ bool load_all_symbols() noexcept;
 
 **Return value**
 
-* `true` if all the symbols of all the libraries have been correctly loaded
-* `false` if a symbol from one of the libraries was not loaded, or if the **plugins\_directory** doesn't exist
+| Possible Name | Description |
+| :--- | :--- |
+| _success_ | `boolean`      - **true** if all the symbols of all the libraries have been correctly loaded    - **false** if a symbol from one of the libraries was not loaded     - **false** if the plugins\_directory doesn't exist |
+
+**Example**
+
+```cpp
+bool success = plugins_registry.load_all_symbols();
+if (!success) {
+   /* The loading of symbols failed */
+}
+```
 
 **Notes**
 
