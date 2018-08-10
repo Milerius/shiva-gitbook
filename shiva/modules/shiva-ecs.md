@@ -1002,7 +1002,26 @@ static constexpr system_type get_system_type() noexcept
 
 **Return value**
 
-* [system\_type](shiva-ecs.md#system_type) of the derived system.
+| Possible  name | Description |
+| :--- | :--- |
+| _**sys\_type**_ | `system_type` |
+
+#### **Example**
+
+```cpp
+auto sys_type = shiva::lua_system::get_system_type();
+
+if (sys_type == shiva::ecs::system_type::logic_update) {
+    //! Do things.
+}
+
+auto render_system = system_manager_.get_system_by_name("render_system", shiva::ecs::system_type::post_update);
+sys_type = render_system.get_system_type_RTTI();
+
+if (sys_type == shiva::ecs::system_type::post_update) {
+    //! Do things.
+}
+```
 
 #### get\_system\_type\_RTTI
 
@@ -1012,7 +1031,13 @@ system_type get_system_type_RTTI() const noexcept final
 
 **Return value**
 
-* [system\_type](shiva-ecs.md#system_type) of the derived system
+| Possible name | Description |
+| :--- | :--- |
+| _**sys\_type**_ | `system_type` |
+
+**Example**
+
+See the [example](shiva-ecs.md#example-1) above.
 
 #### get\_name
 
@@ -1022,5 +1047,15 @@ const std::string &get_name() const noexcept final
 
 **Return value**
 
-* **name** of the derived system.
+| Possible name | Description |
+| :--- | :--- |
+| _**sys\_name**_ | `string` |
+
+**Example**
+
+```cpp
+auto& render_system = system_manager.get_system<my_game::render>();
+const auto& sys_name = render_system.get_name();
+assert(sys_name == "render_system");
+```
 
