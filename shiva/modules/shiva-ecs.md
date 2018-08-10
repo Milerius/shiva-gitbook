@@ -449,11 +449,23 @@ This function recursively calls the [enable\_system](shiva-ecs.md#enable_system)
 
 **Template parameters**
 
-* **TSystem** Represents the system that needs to be disabled
+| Name | Description |
+| :--- | :--- |
+| _**TSystem**_ | `TSystem` |
 
 **Return value**
 
-* **true** if the the system has been disabled, **false** otherwise
+| Possible name | Description |
+| :--- | :--- |
+| _**result**_ | `boolean` |
+
+```cpp
+bool result = system_manager.disable_system<my_game::render>();
+
+if (!result) {
+    //! Oh no the system_manager cannot disable this system.
+}
+```
 
 {% hint style="info" %}
 If you deactivate a system, it will not be destroyed but simply ignore during the game loop
