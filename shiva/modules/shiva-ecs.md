@@ -753,7 +753,20 @@ bool is_marked() const noexcept
 
 **Return value**
 
-* **true** if the system is marked, **false** otherwise
+| Possible name | Description |
+| :--- | :--- |
+| _**result**_ | `boolean` |
+
+**Example**
+
+```cpp
+auto& render_system = system_manager.get_system<my_game::render>();
+bool result = render_system.is_marked();
+
+if (!result) {
+    //! render_system is not marked
+}
+```
 
 #### enable
 
@@ -761,10 +774,24 @@ bool is_marked() const noexcept
 void enable() noexcept
 ```
 
+**Example**
+
+```cpp
+auto& render_system = system_manager.get_system<my_game::render>();
+render_system.enable();
+```
+
 #### disable
 
 ```cpp
 void disable() noexcept
+```
+
+**Example**
+
+```cpp
+auto& render_system = system_manager.get_system<my_game::render>();
+render_system.disable();
 ```
 
 {% hint style="info" %}
@@ -779,7 +806,20 @@ bool is_enabled() const noexcept
 
 **Return value**
 
-* **true** if the system is enabled, **false** otherwise
+| Possible name | Description |
+| :--- | :--- |
+| _**result**_ | `boolean` |
+
+**Example**
+
+```cpp
+auto& render_system = system_manager.get_system<my_game::render>();
+bool result = render_system.is_enabled();
+
+if (!result) {
+    //! render_system is not enable
+}
+```
 
 #### im\_a\_plugin
 
@@ -787,8 +827,17 @@ bool is_enabled() const noexcept
 void im_a_plugin() noexcept
 ```
 
+**Example**
+
+```cpp
+auto& render_system = system_manager.get_system<my_game::render>();
+render_system.im_a_plugin();
+```
+
 {% hint style="info" %}
 This function defines the system as a plugin, and therefore use more feature in runtime to work properly
+
+By default this function is called on plugins.
 {% endhint %}
 
 #### is\_a\_plugin
