@@ -848,7 +848,20 @@ bool is_a_plugin() const noexcept
 
 **Return value**
 
-* **true** if the system is a plugin, **false** otherwise
+| Possible name | Description |
+| :--- | :--- |
+| _**result**_ | `boolean` |
+
+**Example**
+
+```cpp
+auto& render_system = system_manager.get_system<my_game::render>();
+bool result = render_system.is_a_plugin();
+
+if (!result) {
+    //! render_system is not a plugin
+}
+```
 
 #### get\_user\_data
 
@@ -858,7 +871,17 @@ void *get_user_data() noexcept;
 
 **Return value**
 
-* user data of a system \(`nullptr` by default\) 
+| Possible name | Description |
+| :--- | :--- |
+| _**data**_ | `void *` |
+
+#### **Example**
+
+```cpp
+auto render_system = system_manager_.get_system_by_name("render_system", shiva::ecs::system_type::post_update);
+auto input_system = system_manager_.get_system_by_name("input_system", shiva::ecs::system_type::pre_update);
+input_system->set_user_data(render_system->get_user_data());
+```
 
 {% hint style="warning" %}
 * This function retrieve a user data previously set by [set\_user\_data](shiva-ecs.md#set_user_data)
@@ -873,7 +896,13 @@ void set_user_data(void *data) noexcept;
 
 #### Parameters
 
-* `data` a void pointer representing the user data
+| Name | Description |
+| :--- | :--- |
+| _**data**_ | `void *` |
+
+**Example**
+
+See the [example](shiva-ecs.md#example) above.
 
 {% hint style="info" %}
 * This function set a user data for this system
