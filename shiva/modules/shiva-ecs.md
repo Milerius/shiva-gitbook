@@ -575,12 +575,25 @@ size_t nb_systems(system_type sys_type) const noexcept;
 
 #### Parameters
 
-* \(second overload\) **sys\_type** represent the type of systems
+| Name | Description |
+| :--- | :--- |
+| _**sys\_type**_ | [`system_type`](shiva-ecs.md#system_type)\`\` |
 
 #### Return value
 
-* \(first overload\) number of systems
-* \(second overload\) number of systems of a specific type
+| Possible name | Description |
+| :--- | :--- |
+| _**nb\_systems**_ | `size_t` |
+
+**Example**
+
+```cpp
+//! Retrieve the number of systems.
+size_t nb_systems = system_manager.nb_systems();
+
+//! Retrieve the number of systems by a specific system_type.
+size_t nb_systems_logic = system_manager.nb_systems(shiva::ecs::system_type::logic_update);
+```
 
 #### load\_plugins
 
