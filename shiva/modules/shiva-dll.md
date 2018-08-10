@@ -11,7 +11,7 @@ Through this class you are able to retrieve the number of plugins, apply a funct
 
 ![](../../.gitbook/assets/plugins_registry.png)
 
-### plugins\_registry api
+### plugins\_registry API
 
 {% tabs %}
 {% tab title="Class Signature" %}
