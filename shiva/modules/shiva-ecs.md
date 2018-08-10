@@ -603,7 +603,19 @@ bool load_plugins() noexcept;
 
 #### Return value
 
-* `true` if all the plugins has been successfully loaded, `false` otherwise
+| Possible name | Description |
+| :--- | :--- |
+| _**result**_ | `boolean` |
+
+**Example**
+
+```cpp
+bool result = system_manager.load_plugins();
+
+if (!result) {
+    // Oh no, atleast one of the plugins could not be loaded.
+}
+```
 
 #### Notes
 
@@ -621,12 +633,25 @@ base_system *get_system_by_name(std::string system_name,
 
 #### Parameters
 
-* **system\_name** name of the system to get
-* **type** system\_type of the system to get
+| Name | Description |
+| :--- | :--- |
+| _**system\_name**_ | `string` |
+| _**type**_ | \`\`[`system_type`](shiva-ecs.md#system_type)\`\` |
 
 **Return value**
 
-* a pointer to the base system which match this name, nullptr otherwise.
+| Possible name | Description |
+| :--- | :--- |
+| _**render\_system**_ | `base_system *` |
+
+**Example**
+
+```cpp
+base_system* render_system = system_manager.get_system_by_name("render_system", shiva::ecs::system_type::post_update);
+if (render_system == nullptr) {
+    //! Oh no, could not get the system properly.
+}
+```
 
 **Notes**
 
@@ -636,6 +661,10 @@ base_system *get_system_by_name(std::string system_name,
 
 {% hint style="danger" %}
 This class is an **abstract class**, it is documented but is present only to make type-erasure of the class system which is templated
+{% endhint %}
+
+{% hint style="info" %}
+This class can be manipulated when using **plugins** to share data between them.
 {% endhint %}
 
 ### Description
@@ -688,6 +717,13 @@ explicit base_system(entt::dispatcher &dispatcher,
 void mark() noexcept
 ```
 
+**Example**
+
+```cpp
+auto& render_system = system_manager.get_system<my_game::render>();
+render_system.mark();
+```
+
 {% hint style="info" %}
 This function marks the system, it will be destroyed in the next tick of the [game loop](shiva-ecs.md#diagram) by the [system\_manager](shiva-ecs.md#system_manager).
 {% endhint %}
@@ -696,6 +732,13 @@ This function marks the system, it will be destroyed in the next tick of the [ga
 
 ```cpp
 void unmark() noexcept
+```
+
+**Example**
+
+```cpp
+auto& render_system = system_manager.get_system<my_game::render>();
+render_system.unmark();
 ```
 
 {% hint style="info" %}
