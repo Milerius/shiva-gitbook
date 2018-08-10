@@ -61,7 +61,7 @@ This game loop is based on the gafferon on games tutorial: [Fix your timestep](h
 
 This file contains an enum representing the different types of [systems presented previously](shiva-ecs.md#how-works-the-system), and three strong types, later used in template parameter by the [system class](shiva-ecs.md#system).
 
-### system\_type api
+### system\_type API
 
 {% tabs %}
 {% tab title="Enum" %}
@@ -95,7 +95,7 @@ This class manage the **systems** of the entity component system. You are able t
 
 ![system\_manager](../../.gitbook/assets/diagram.png)
 
-### system\_manager api
+### system\_manager API
 
 {% tabs %}
 {% tab title="Signature" %}
@@ -163,7 +163,7 @@ if (nb_systems_updated != 5) {
 
 **Notes**
 
-This is the function that update your **systems**. Based on the logic of the different kinds of [shiva systems](shiva-ecs.md#how-works-the-system), this function take care of updating your systems in the right order.
+This is the function that updates your **systems**. Based on the logic of the different kinds of [shiva systems](shiva-ecs.md#how-works-the-system), this function take care of updating your systems in the right order.
 
 {% hint style="info" %}
 If you have not loaded any system into the **system\_manager** the function return 0.
@@ -675,7 +675,7 @@ base class of shiva systems
 
 ![base\_system](../../.gitbook/assets/baseclass.png)
 
-### base\_system api
+### base\_system API
 
 {% tabs %}
 {% tab title="Signature" %}
@@ -924,7 +924,7 @@ This class is the class that you have to inherit to create your systems
 
 ![system](../../.gitbook/assets/system.png)
 
-### system api
+### system API
 
 {% tabs %}
 {% tab title="Signature" %}
