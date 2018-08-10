@@ -515,30 +515,51 @@ TSystem &create_system(TSystemArgs &&...args)
 
 #### Template parameters
 
-* **TSystem** represents the type of system to create
-* **TSystemArgs** represents the arguments needed to construct the system to create
+| Name | Description |
+| :--- | :--- |
+| _**TSystem**_ | `TSystem` |
+| _**args**_ | `TSystemArgs` |
 
 #### Return value
 
-* Returns a reference to the created system
+| Possible name | Description |
+| :--- | :--- |
+| _**render\_system**_ | `TSystem &` |
+
+**Example**
+
+```cpp
+auto& render_system = system_manager.create_system<my_game::render>(/* args */);
+```
 
 #### load\_systems
 
 ```cpp
 template <typename ...TSystems>
 std::tuple<std::add_lvalue_reference_t<TSystems>...> load_systems()
-
-template <typename ...TSystems>
-std::tuple<std::add_lvalue_reference_t<std::add_const_t<TSystems>>...> load_systems()
 ```
 
 **Template parameters**
 
-* **TSystems** represents a list of systems to be loaded
+| Name | Description |
+| :--- | :--- |
+| _**TSystems**_ | `TSystems` |
 
 **Return value**
 
-* **Tuple** of systems loaded
+| Possible name | Description |
+| :--- | :--- |
+| _**tuple\_systems**_, \[_**system\_foo**_, _**system\_bar**_\] | `Tuple<TSystem &>` |
+
+**Example**
+
+```cpp
+// Tuple packed
+auto tuple_systems = system_manager.load_systems<system_foo, system_bar>();
+
+// Tuple unpacked
+auto [system_foo, system_bar] = system_manager.load_systems<system_foo, system_bar>();
+```
 
 {% hint style="warning" %}
 This function calls [get\_systems](shiva-ecs.md#get_systems) and can therefore potentially **throw**
