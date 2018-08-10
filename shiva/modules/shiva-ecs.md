@@ -459,6 +459,8 @@ This function recursively calls the [enable\_system](shiva-ecs.md#enable_system)
 | :--- | :--- |
 | _**result**_ | `boolean` |
 
+**Example**
+
 ```cpp
 bool result = system_manager.disable_system<my_game::render>();
 
@@ -480,11 +482,25 @@ If you deactivate a system, it will not be destroyed but simply ignore during th
 
 #### Template parameters
 
-* **TSystems** Represents a list of systems that needs to be disabled
+| Name | Description |
+| :--- | :--- |
+| _**TSystems**_ | `TSystems` |
 
 **Return value**
 
-* **true** if the list of systems has been disabled, **false** otherwise
+| Possible name | Description |
+| :--- | :--- |
+| _**result**_ | `boolean` |
+
+**Example**
+
+```cpp
+bool result = system_manager.disable_systems<my_game::render, my_game::audio>();
+
+if (!result) {
+    //! Oh no, atleast one of the requested systems cannot be disabled.
+}
+```
 
 {% hint style="info" %}
 This function recursively calls the [disable\_system](shiva-ecs.md#disable_system) function
