@@ -124,7 +124,7 @@ dispatcher.trigger<shiva::event::fatal_error_occured>(std::make_error_code(std::
 ```
 
 {% hint style="success" %}
-You can find a more concrete example in the source code [here](https://github.com/Milerius/shiva/blob/master/modules/ecs/shiva/ecs/system_manager.hpp#L358)
+You can find a more concrete example in the source code [here](https://github.com/Milerius/shiva/blob/master/modules/ecs/shiva/ecs/system_manager.hpp#L355)
 {% endhint %}
 {% endtab %}
 {% endtabs %}
