@@ -24,6 +24,10 @@ The purpose of this module is to give users the opportunity to interact through 
 | key\_released | triggers an event if the user release a key on his keyboard |
 | change\_scene | triggers an event that indicates the change from one scene to another |
 
+{% hint style="info" %}
+All events are default constructible.
+{% endhint %}
+
 ### add\_base\_system
 
 {% tabs %}
@@ -76,5 +80,27 @@ We recommend that you do not trigger this event unless you use your own system m
 {% endtab %}
 {% endtabs %}
 
+### after\_load\_resources
 
+{% tabs %}
+{% tab title="Constructor" %}
+{% hint style="info" %}
+This event has no constructor
+{% endhint %}
+{% endtab %}
+
+{% tab title="Example" %}
+```cpp
+#include <memory>
+#include <shiva/event/after_load_resources.hpp>
+
+shiva::entt::dispatcher dispatcher;
+dispatcher.trigger<shiva::event::after_load_resources>();
+```
+
+{% hint style="success" %}
+You can find a more concrete example in the source code [here](https://github.com/Milerius/shiva/blob/master/modules/sfml/shiva/sfml/resources/sfml-resources-registry.hpp#L333)
+{% endhint %}
+{% endtab %}
+{% endtabs %}
 
