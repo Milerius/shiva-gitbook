@@ -133,11 +133,24 @@ You can find a more concrete example in the source code [here](https://github.co
 
 {% tabs %}
 {% tab title="Constructor" %}
-
+```cpp
+quit_game(int return_value) noexcept;
+```
 {% endtab %}
 
 {% tab title="Example" %}
+```cpp
+#include <memory>
+#include <system_error>
+#include <shiva/event/quit_game.hpp>
 
+shiva::entt::dispatcher dispatcher;
+dispatcher.trigger<shiva::event::quit_game>(0);
+```
+
+{% hint style="success" %}
+You can find a more concrete example in the source code [here](https://github.com/Milerius/shiva/blob/master/modules/error/shiva/error/general_error_handler.hpp#L49)
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
@@ -145,11 +158,24 @@ You can find a more concrete example in the source code [here](https://github.co
 
 {% tabs %}
 {% tab title="Constructor" %}
-
+{% hint style="info" %}
+This event has no constructor
+{% endhint %}
 {% endtab %}
 
 {% tab title="Example" %}
+```cpp
+#include <memory>
+#include <system_error>
+#include <shiva/event/start_game.hpp>
 
+shiva::entt::dispatcher dispatcher;
+dispatcher.trigger<shiva::event::start_game>();
+```
+
+{% hint style="success" %}
+You can find a more concrete example in the source code [here](https://github.com/Milerius/shiva/blob/master/modules/world/shiva/world/world.hpp#L46)
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
@@ -157,11 +183,28 @@ You can find a more concrete example in the source code [here](https://github.co
 
 {% tabs %}
 {% tab title="Constructor" %}
-
+```cpp
+key_pressed(shiva::input::keyboard::TKey key) noexcept;
+```
 {% endtab %}
 
 {% tab title="Example" %}
+```cpp
+#include <memory>
+#include <system_error>
+#include <shiva/event/key_pressed.hpp>
 
+shiva::entt::dispatcher dispatcher;
+dispatcher.trigger<shiva::event::key_pressed>(shiva::input::keyboard::TKey::A);
+```
+
+{% hint style="info" %}
+You can find more information about input [here](shiva-input.md)
+{% endhint %}
+
+{% hint style="success" %}
+You can find a more concrete example in the source code [here](https://github.com/Milerius/shiva/blob/66e2675368b59a060c11ccee2889f199d74de86c/modules/sfml/shiva/sfml/inputs/system-sfml-inputs.cpp#L30)
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
@@ -169,11 +212,20 @@ You can find a more concrete example in the source code [here](https://github.co
 
 {% tabs %}
 {% tab title="Constructor" %}
-
+```cpp
+key_released(shiva::input::keyboard::TKey key) noexcept;
+```
 {% endtab %}
 
 {% tab title="Example" %}
+```cpp
+#include <memory>
+#include <system_error>
+#include <shiva/event/key_released.hpp>
 
+shiva::entt::dispatcher dispatcher;
+dispatcher.trigger<shiva::event::key_released>(shiva::input::keyboard::TKey::A);
+```
 {% endtab %}
 {% endtabs %}
 
@@ -181,11 +233,20 @@ You can find a more concrete example in the source code [here](https://github.co
 
 {% tabs %}
 {% tab title="Constructor" %}
-
+```cpp
+change_scene(const char* scene_name_ = nullptr) noexcept;
+```
 {% endtab %}
 
 {% tab title="Example" %}
+```cpp
+#include <memory>
+#include <system_error>
+#include <shiva/event/change_scene.hpp>
 
+shiva::entt::dispatcher dispatcher;
+dispatcher.trigger<shiva::event::change_scene>("game_scene");
+```
 {% endtab %}
 {% endtabs %}
 
