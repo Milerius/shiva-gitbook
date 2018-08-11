@@ -107,23 +107,36 @@ You can find a more concrete example in the source code [here](https://github.co
 ### fatal\_error\_occured
 
 {% tabs %}
-{% tab title="First Tab" %}
-
+{% tab title="Constructor" %}
+```cpp
+fatal_error_occured(std::error_code ec) noexcept;
+```
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="Example" %}
+```cpp
+#include <memory>
+#include <system_error>
+#include <shiva/event/fatal_error_occured.hpp>
 
+shiva::entt::dispatcher dispatcher;
+dispatcher.trigger<shiva::event::fatal_error_occured>(std::make_error_code(std::errc::result_out_of_range));
+```
+
+{% hint style="success" %}
+You can find a more concrete example in the source code [here](https://github.com/Milerius/shiva/blob/master/modules/ecs/shiva/ecs/system_manager.hpp#L358)
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
 ### quit\_game
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Constructor" %}
 
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="Example" %}
 
 {% endtab %}
 {% endtabs %}
@@ -131,11 +144,11 @@ You can find a more concrete example in the source code [here](https://github.co
 ### start\_game
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Constructor" %}
 
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="Example" %}
 
 {% endtab %}
 {% endtabs %}
@@ -143,11 +156,11 @@ You can find a more concrete example in the source code [here](https://github.co
 ### key\_pressed
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Constructor" %}
 
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="Example" %}
 
 {% endtab %}
 {% endtabs %}
@@ -155,11 +168,11 @@ You can find a more concrete example in the source code [here](https://github.co
 ### key\_released
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Constructor" %}
 
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="Example" %}
 
 {% endtab %}
 {% endtabs %}
@@ -167,11 +180,11 @@ You can find a more concrete example in the source code [here](https://github.co
 ### change\_scene
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Constructor" %}
 
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="Example" %}
 
 {% endtab %}
 {% endtabs %}
