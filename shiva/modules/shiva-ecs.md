@@ -175,10 +175,10 @@ If you decide to mark a system, it will be automatically **deleted** at the next
 
 ```cpp
 template <typename TSystem>
-const TSystem &get_system() const;
+const TSystem &get_system() const noexcept;
 
 template <typename TSystem>
-TSystem &get_system();
+TSystem &get_system() noexcept;
 ```
 
 **Template parameters**
@@ -192,10 +192,6 @@ TSystem &get_system();
 | Possible name | Description |
 | :--- | :--- |
 | _**render\_system, log\_system**_ | `TSystem &const TSystem &` |
-
-{% hint style="danger" %}
-**Throw** a `std::logic_error` if the system could not be obtained correctly or if it was never loaded.
-{% endhint %}
 
 **Example**
 
@@ -211,10 +207,10 @@ const auto& log_system = system_manager.get_system<game::log_system>();
 
 ```cpp
 template <typename ...TSystems>
-std::tuple<std::add_lvalue_reference_t<TSystems>...> get_systems();
+std::tuple<std::add_lvalue_reference_t<TSystems>...> get_systems() noexcept;
 
 template <typename ...TSystems>
-std::tuple<std::add_lvalue_reference_t<std::add_const_t<TSystems>>...> get_systems() const
+std::tuple<std::add_lvalue_reference_t<std::add_const_t<TSystems>>...> get_systems() const noexcept;
 ```
 
 **Template parameters**
@@ -536,7 +532,7 @@ auto& render_system = system_manager.create_system<my_game::render>(/* args */);
 
 ```cpp
 template <typename ...TSystems>
-std::tuple<std::add_lvalue_reference_t<TSystems>...> load_systems()
+std::tuple<std::add_lvalue_reference_t<TSystems>...> load_systems() noexcept;
 ```
 
 **Template parameters**
@@ -560,10 +556,6 @@ auto tuple_systems = system_manager.load_systems<system_foo, system_bar>();
 // Tuple unpacked
 auto [system_foo, system_bar] = system_manager.load_systems<system_foo, system_bar>();
 ```
-
-{% hint style="warning" %}
-This function calls [get\_systems](shiva-ecs.md#get_systems) and can therefore potentially **throw**
-{% endhint %}
 
 #### nb\_systems
 
