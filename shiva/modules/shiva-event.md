@@ -16,13 +16,13 @@ The purpose of this module is to give users the opportunity to interact through 
 | :---: | :---: |
 | [add\_base\_system](shiva-event.md#add_base_system) | trigger an event that add a system in the system manager |
 | [after\_load\_systems\_plugins](shiva-event.md#after_load_systems_plugins) | triggers an event after the complete loading of plugged systems |
-| after\_load\_resources | triggers an event after the complete loading resource of a scene or program |
-| fatal\_error\_occured | triggers an event that indicates that an uncorrectable error has occurred |
-| quit\_game | triggers an event that indicates the end of the program |
-| start\_game | triggers an event that indicates the beginning of the program |
-| key\_pressed | triggers an event if the user presses a key on his keyboard |
-| key\_released | triggers an event if the user release a key on his keyboard |
-| change\_scene | triggers an event that indicates the change from one scene to another |
+| [after\_load\_resources](shiva-event.md#after_load_resources) | triggers an event after the complete loading resource of a scene or program |
+| [fatal\_error\_occured](shiva-event.md#fatal_error_occured) | triggers an event that indicates that an uncorrectable error has occurred |
+| [quit\_game](shiva-event.md#quit_game) | triggers an event that indicates the end of the program |
+| [start\_game](shiva-event.md#start_game) | triggers an event that indicates the beginning of the program |
+| [key\_pressed](shiva-event.md#key_pressed) | triggers an event if the user presses a key on his keyboard |
+| [key\_released](shiva-event.md#key_released) | triggers an event if the user release a key on his keyboard |
+| [change\_scene](shiva-event.md#change_scene) | triggers an event that indicates the change from one scene to another |
 
 {% hint style="info" %}
 All events are default constructible.
@@ -101,6 +101,78 @@ dispatcher.trigger<shiva::event::after_load_resources>();
 {% hint style="success" %}
 You can find a more concrete example in the source code [here](https://github.com/Milerius/shiva/blob/master/modules/sfml/shiva/sfml/resources/sfml-resources-registry.hpp#L333)
 {% endhint %}
+{% endtab %}
+{% endtabs %}
+
+### fatal\_error\_occured
+
+{% tabs %}
+{% tab title="First Tab" %}
+
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
+
+### quit\_game
+
+{% tabs %}
+{% tab title="First Tab" %}
+
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
+
+### start\_game
+
+{% tabs %}
+{% tab title="First Tab" %}
+
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
+
+### key\_pressed
+
+{% tabs %}
+{% tab title="First Tab" %}
+
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
+
+### key\_released
+
+{% tabs %}
+{% tab title="First Tab" %}
+
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
+
+### change\_scene
+
+{% tabs %}
+{% tab title="First Tab" %}
+
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
 {% endtab %}
 {% endtabs %}
 
