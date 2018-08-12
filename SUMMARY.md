@@ -23,6 +23,7 @@
       * [shiva::system-sfml-graphics](shiva/modules/shiva-sfml/shiva-system-sfml-graphics.md)
       * [shiva::system-sfml-inputs](shiva/modules/shiva-sfml/shiva-system-sfml-inputs.md)
       * [shiva::system-sfml-resources](shiva/modules/shiva-sfml/shiva-system-sfml-resources.md)
+      * [shiva::system-sfml-animation](shiva/modules/shiva-sfml/shiva-system-sfml-animation.md)
     * [shiva::spdlog](shiva/modules/shiva-spdlog.md)
     * [shiva::stacktrace](shiva/modules/shiva-stacktrace.md)
     * [shiva::timer](shiva/modules/shiva-timer.md)
