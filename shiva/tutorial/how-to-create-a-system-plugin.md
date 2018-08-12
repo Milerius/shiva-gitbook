@@ -193,3 +193,12 @@ void system_example::receive(const shiva::event::key_pressed &evt)
 }
 ```
 
+{% hint style="warning" %}
+If some things seem complicated, or parts not included in this tutorial, you will find more information on the following pages:
+
+* [shiva::ecs](../modules/shiva-ecs.md)
+* [shiva::entt](../modules/shiva-entt.md)
+* [shiva::event](../modules/shiva-event.md)
+* [shiva::input](../modules/shiva-input.md)
+{% endhint %}
+
