@@ -2,6 +2,11 @@
 
 ## Prerequisite:
 
+* CMake 3.9 \(minimum\)
+* VCPKG \(optional\)
+* Scripting \(lua and python 3.6 minimum\)
+* C++17 Compiler MSVC/Clang/GCC \(mingw/cygwin/xcode are not supported\)
+
 If you want to install shiva you have two possibilities:
 
 * Using shiva as a submodule
