@@ -34,5 +34,6 @@
     * [Quick'start](shiva/tutorial/quickstart.md)
     * [How to create/build/install a system plugin](shiva/tutorial/how-to-create-a-system-plugin.md)
     * [How to create a scripted system](shiva/tutorial/how-to-create-a-scripted-system.md)
+    * [How to create a project through the CLI tools and build it](shiva/tutorial/how-to-create-a-project-through-the-cli-tools-and-build-it.md)
   * [Changelog](shiva/release-notes.md)
 
