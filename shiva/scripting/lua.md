@@ -67,7 +67,7 @@ shiva.entity_registry:create()
 
 ```lua
 function foo()
-    local id = shiva.entity_registry:create()
+    local entity_id = shiva.entity_registry:create()
 end
 ```
 
