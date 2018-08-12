@@ -193,6 +193,40 @@ void system_example::receive(const shiva::event::key_pressed &evt)
 }
 ```
 
+## CMake
+
+Here are two examples of CMake possible for the implementation of a plugin with shiva, one in the project directly if you are contributors, one externally if you make plugins for shiva in another repository
+
+### Inside shiva project
+
+```cpp
+include(shiva/${module_name}/CMakeSources.cmake)
+set(MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR})
+CREATE_MODULE_PLUGIN(shiva::${module_name} "${MODULE_SOURCES}" ${MODULE_PATH} "systems" "${module_name}/shiva")
+target_link_libraries(${module_name} PUBLIC shiva::ecs)
+AUTO_TARGETS_PLUGINS_INSTALL(${module_name} shiva-${module_name})
+```
+
+{% hint style="success" %}
+You can find a more concrete example [here](https://github.com/Milerius/shiva/blob/master/modules/sfml/CMakeLists.txt).
+{% endhint %}
+
+### Outside shiva project
+
+```haskell
+find_package(shiva CONFIG REQUIRED)
+file(GLOB_RECURSE MODULE_NAME_SOURCES ${module_name}/*.cpp prerequisites/*.cpp)
+file(GLOB_RECURSE MODULE_NAME_HEADERS ${module_name}/*.hpp)
+add_library(${module_name} SHARED ${MODULE_NAME_SOURCES} ${MODULE_NAME_HEADERS})
+target_link_libraries(${module_name} PUBLIC
+        shiva::shiva
+        ${LUA_LIBRARIES}) ##! additional libraries
+ set_target_properties(${module_name}
+            PROPERTIES
+            LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/${CMAKE_BUILD_TYPE}/systems")
+
+```
+
 ## Additional hints
 
 {% hint style="warning" %}
