@@ -1,4 +1,4 @@
-# How to create a system plugin
+# How to create/build/install a system plugin
 
 ## Let's write some code
 
