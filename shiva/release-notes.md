@@ -1,5 +1,31 @@
 # Changelog
 
+## Shiva 0.9
+
+### Updated
+
+* Refactor the whole code base
+* Update the documentation
+
+### Fixed
+
+* Inlining issue
+
+## Shiva 0.8
+
+### Updated
+
+* Build system
+
+### Fixed
+
+* Windows compilation
+* Game loop
+
+### Added
+
+* shiva-sfml animation system
+
 ## Shiva 0.7
 
 ### Updated
