@@ -155,3 +155,41 @@ namespace shiva::examples::sfml
 In the example you see above which is directly derived from the shiva [code](https://github.com/Milerius/shiva/blob/master/tools/game_templates/sfml/project_name/world/project_name_world.hpp) for the [shiva-sfml](../modules/shiva-sfml/) module, I needed to share the **SFML** window in several different [modules](../modules/), for input and rendering, for example. through functions like set\_user\_data && get\_user\_data, I'm able to transfer data that only concerns plugins.
 {% endhint %}
 
+## How to subscribe/emit event from a system plugin \(or header-only\)
+
+Here's an example of how you could do it
+
+```cpp
+//! system_example.hpp
+class system_example
+{
+public:
+ /* ... other class things */
+ 
+ //! Callback (you will receive the event in this function)
+ void receive(const shiva::event::key_pressed &evt);
+};
+
+//! system_example.cpp        
+system_example::system_example(shiva::entt::dispatcher &dispatcher, shiva::entt::entity_registry &registry,
+                                   const float &fixed_delta_time) noexcept :
+system(dispatcher, registry, fixed_delta_time, true) //! true means im_a_plugin
+{
+        //! You can set user data here if you want to share data betweens plugins
+        user_data_ = /* whatever you want */;
+        
+        //! Also if you need to initialize some things for the system is here.
+        
+        //! Subscribe to an event
+        this->dispatcher_.sink<shiva::event::key_pressed>().connect(this);
+        
+        //! emit an event
+        this->dispatcher_.trigger<shiva::event::key_pressed>(shiva::input::keyboard::TKey::A);
+}
+
+void system_example::receive(const shiva::event::key_pressed &evt)
+{
+        //! Treat your event here
+}
+```
+
