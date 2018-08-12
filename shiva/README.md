@@ -18,3 +18,13 @@ It is based on an architecture of [modules](modules/) that can be used separatel
 | Jenkins-Windows | [![Build Status](http://ci.slyris.eu/buildStatus/icon?job=shiva)](http://ci.slyris.eu/job/shiva/) |
 | Jenkins-Linux | [![Build Status](http://ci.slyris.eu/buildStatus/icon?job=shiva-pipeline/master)](http://ci.slyris.eu/job/shiva-pipeline/job/master/) |
 
+## Supported Compiler:
+
+| Compiler | Version |
+| :--- | :--- |
+| MSVC | 15.7 or + |
+| G++ | 7.2 or + |
+| Clang | 6.0 or + |
+
+
+
