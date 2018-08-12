@@ -193,6 +193,8 @@ void system_example::receive(const shiva::event::key_pressed &evt)
 }
 ```
 
+## Additional hints
+
 {% hint style="warning" %}
 If some things seem complicated, or parts not included in this tutorial, you will find more information on the following pages:
 
