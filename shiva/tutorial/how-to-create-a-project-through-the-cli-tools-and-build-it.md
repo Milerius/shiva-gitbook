@@ -33,6 +33,8 @@ cmake --build . --config Release
 
 **Linux or OSX**
 
+Open bash and type:
+
 ```bash
 ##! Linux
 cd $VCPKG_ROOT/installed/x64-linux/share/shiva/tools
