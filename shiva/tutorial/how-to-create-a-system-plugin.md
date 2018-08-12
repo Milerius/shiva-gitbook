@@ -199,12 +199,13 @@ Here are two examples of CMake possible for the implementation of a plugin with 
 
 ### Inside shiva project
 
-```cpp
+```bash
 include(shiva/${module_name}/CMakeSources.cmake)
 set(MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 CREATE_MODULE_PLUGIN(shiva::${module_name} "${MODULE_SOURCES}" ${MODULE_PATH} "systems" "${module_name}/shiva")
 target_link_libraries(${module_name} PUBLIC shiva::ecs)
 AUTO_TARGETS_PLUGINS_INSTALL(${module_name} shiva-${module_name})
+PREPARE_MODULE_INSTALLATION(shiva-${module_name})
 ```
 
 {% hint style="success" %}
@@ -213,18 +214,19 @@ You can find a more concrete example [here](https://github.com/Milerius/shiva/bl
 
 ### Outside shiva project
 
-```haskell
+```bash
 find_package(shiva CONFIG REQUIRED)
-file(GLOB_RECURSE MODULE_NAME_SOURCES ${module_name}/*.cpp prerequisites/*.cpp)
-file(GLOB_RECURSE MODULE_NAME_HEADERS ${module_name}/*.hpp)
-add_library(${module_name} SHARED ${MODULE_NAME_SOURCES} ${MODULE_NAME_HEADERS})
-target_link_libraries(${module_name} PUBLIC
+file(GLOB_RECURSE MODULE_NAME_SOURCES my_plugin/*.cpp prerequisites/*.cpp)
+file(GLOB_RECURSE MODULE_NAME_HEADERS my_plugin/*.hpp)
+set(MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR})
+set(MODULE_FULL_SOURCES ${MODULE_NAME_SOURCES} ${MODULE_NAME_HEADERS})
+##! CREATE_MODULE_PLUGIN ModuleAlias LibSources BuildInterfaceDirectory OutputDirectory InstallPath
+CREATE_MODULE_PLUGIN(shiva::my_plugin "${MODULE_FULL_SOURCES}" ${MODULE_PATH} "systems" "my_plugin/shiva")
+target_link_libraries(my_plugin PUBLIC
         shiva::shiva
         ${LUA_LIBRARIES}) ##! additional libraries
- set_target_properties(${module_name}
-            PROPERTIES
-            LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin/${CMAKE_BUILD_TYPE}/systems")
-
+AUTO_TARGETS_PLUGINS_INSTALL(my_plugin shiva-my_plugin)
+PREPARE_MODULE_INSTALLATION(shiva-my_plugin)
 ```
 
 ## Additional hints
