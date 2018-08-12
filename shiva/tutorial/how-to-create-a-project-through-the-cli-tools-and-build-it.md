@@ -4,8 +4,9 @@
 
 ### Prerequisites
 
-* You should install shiva with vcpkg or with a regular installation before following this tutorial.
-* Python 3.6
+* You should install shiva with **vcpkg** or with a regular installation before following this tutorial.
+* **VCPKG\_ROOT** env variable set to the root directory of your installation of VCPKG
+* **Python 3.6**
 
 ## Create a project and build it
 
