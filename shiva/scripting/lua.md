@@ -6,6 +6,14 @@
 | :--- | :--- |
 | [shiva.dispatcher:trigger\_\[event\_name\]\_event](lua.md#shiva-dispatcher-trigger_-event_name-_event) | trigger an event with the c++ dispatcher |
 
+## Entity Registry
+
+| Functions | Description |
+| :--- | :--- |
+| [shiva.entity\_registry:create](lua.md#shiva-entity_registry-create) | create an entity. |
+
+## Events API Documentation
+
 ### shiva.dispatcher:trigger\_\[event\_name\]\_event
 
 This function trigger an event using the EnTT dispatcher.
@@ -36,6 +44,30 @@ function on_key_pressed(evt)
         -- quit_game.hpp take a integer as argument for his construction
         shiva.dispatcher:trigger_quit_game_event(1)
     end
+end
+```
+
+## Entity Registry API Documentation
+
+### shiva.entity\_registry:create
+
+This function create an entity through the EnTT registry and return an unique identifier.
+
+```lua
+shiva.entity_registry:create()
+```
+
+**Return value**
+
+| Possible name | Description |
+| :--- | :--- |
+| _**entity\_id**_ | `integer` |
+
+**Example**
+
+```lua
+function foo()
+    local id = shiva.entity_registry:create()
 end
 ```
 
