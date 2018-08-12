@@ -101,3 +101,53 @@ BOOST_DLL_ALIAS(
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+## How to share data between plugins \(without the dispatcher\)
+
+{% hint style="warning" %}
+We assume here that you have set the user\_data as shown in the example above
+{% endhint %}
+
+{% code-tabs %}
+{% code-tabs-item title="sfml-example.hpp" %}
+```cpp
+namespace shiva::examples::sfml
+{
+    class example_world : public shiva::world
+    {
+    public:
+        ~example_world() noexcept = default;
+
+        example_world() noexcept
+        {
+            bool res = system_manager_.load_plugins();
+            if (!res) {
+                std::cerr << "error loading plugins" << std::endl;
+            } else {
+                auto &lua_system = system_manager_.create_system<shiva::scripting::lua_system>();
+                auto render_system = system_manager_.get_system_by_name("render_system",
+                                                                        shiva::ecs::system_type::post_update);
+                auto input_system = system_manager_.get_system_by_name("input_system",
+                                                                       shiva::ecs::system_type::pre_update);
+                auto resources_system = system_manager_.get_system_by_name("resources_system",
+                                                                           shiva::ecs::system_type::pre_update);
+                auto animation_system = system_manager_.get_system_by_name("animation_system",
+                                                                           shiva::ecs::system_type::logic_update);
+                if (render_system != nullptr &&
+                    animation_system != nullptr &&
+                    resources_system != nullptr &&
+                    input_system != nullptr) {
+                    resources_system->set_user_data(&lua_system.get_state());
+                    animation_system->set_user_data(&lua_system.get_state());
+                    input_system->set_user_data(render_system->get_user_data());
+                    lua_system.load_all_scripted_systems();
+                }
+            }
+        }
+    };
+}
+
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
