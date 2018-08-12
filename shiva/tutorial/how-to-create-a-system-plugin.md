@@ -152,7 +152,7 @@ namespace shiva::examples::sfml
 {% endcode-tabs %}
 
 {% hint style="success" %}
-In the example you see above which is directly derived from the shiva [code](https://github.com/Milerius/shiva/blob/master/tools/game_templates/sfml/project_name/world/project_name_world.hpp) for the [shiva-sfml](../modules/shiva-sfml/) module, I needed to share the **SFML** window in several different [modules](../modules/), for input and rendering, for example. through functions like set\_user\_data && get\_user\_data, I'm able to transfer data that only concerns plugins.
+In the example you see above which is directly derived from the shiva [code](https://github.com/Milerius/shiva/blob/master/tools/game_templates/sfml/project_name/world/project_name_world.hpp) for the [shiva-sfml](../modules/shiva-sfml/) module, I needed to share the **SFML** window in several different [modules](../modules/), for input and rendering, for example. through functions like [set\_user\_data](../modules/shiva-ecs.md#set_user_data) && [get\_user\_data](../modules/shiva-ecs.md#get_user_data), I'm able to transfer data that only concerns plugins.
 {% endhint %}
 
 ## How to subscribe/emit event from a system plugin \(or header-only\)
