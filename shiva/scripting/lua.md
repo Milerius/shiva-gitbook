@@ -13,6 +13,8 @@
 | [shiva.entity\_registry:create](lua.md#shiva-entity_registry-create) | create an entity. |
 | [shiva.entity\_registry:destroy](lua.md#shiva-entity_registry-destroy) | destroy an entity |
 | [shiva.entity\_registry:nb\_entities](lua.md#shiva-entity_registry-nb_entities) | get the numbers of entities |
+| shiva.entity\_registry:has\_\[component\_name\]\_component | checks whether the requested component is associated with the given entity |
+|  |  |
 
 ## Events API Documentation
 
@@ -118,6 +120,48 @@ function foo()
     assert(shiva.entity_registry:nb_entities() == 1)
     shiva.entity_registry:destroy(id)
     assert(shiva.entity_registry:nb_entities() == 0)
+end
+```
+
+### shiva.entity_registry:has\__\[component\_name\]\_component
+
+This function checks whether the requested component is associated with the given entity through the EnTT registry
+
+{% hint style="info" %}
+All those functions are automatically generated based on the common components.
+{% endhint %}
+
+```lua
+-- Global signature
+shiva.entity_registry:has_[component_name]_component(entity_id);
+
+-- Example of generated one
+shiva.entity_registry:has_layer_1_component(entity_id);
+```
+
+**Parameters**
+
+| Name | Description |
+| :--- | :--- |
+| _**entity\_id**_ | `integer` |
+
+**Return value**
+
+| Possible name | Description |
+| :--- | :--- |
+| _**result**_ | `boolean` |
+
+**Example**
+
+```lua
+function foo()
+    local entity_id = shiva.entity_registry:create()
+    local component = shiva.entity_registry:add_layer_1_component(entity_id)
+    local same_component = shiva.entity_registry:get_layer_1_component(entity_id)
+    assert(shiva.entity_registry:has_layer_1_component(entity_id) == true, "should be true")
+    shiva.entity_registry:remove_layer_1_component(entity_id)
+    assert(shiva.entity_registry:has_layer_1_component(entity_id) == false, "should be false")
+    return true
 end
 ```
 
