@@ -12,7 +12,7 @@
 | :--- | :--- |
 | [shiva.entity\_registry:create](lua.md#shiva-entity_registry-create) | create an entity. |
 | [shiva.entity\_registry:destroy](lua.md#shiva-entity_registry-destroy) | destroy an entity |
-| shiva.entity\_registry:nb\_entities | get the numbers of entities |
+| [shiva.entity\_registry:nb\_entities](lua.md#shiva-entity_registry-nb_entities) | get the numbers of entities |
 
 ## Events API Documentation
 
@@ -93,6 +93,31 @@ shiva.entity_registry:destroy(entity_id);
 function foo()
     local id = shiva.entity_registry:create()
     shiva.entity_registry:destroy(id)
+end
+```
+
+### shiva.entity\_registry:nb\_entities
+
+This function retrieve the number of entities through the EnTT registry
+
+```lua
+shiva.entity_registry:nb_entities()
+```
+
+**Return value**
+
+| Possible name | Description |
+| :--- | :--- |
+| _**nb\_entities**_ | `integer` |
+
+**Example**
+
+```lua
+function foo()
+    local id = shiva.entity_registry:create()
+    assert(shiva.entity_registry:nb_entities() == 1)
+    shiva.entity_registry:destroy(id)
+    assert(shiva.entity_registry:nb_entities() == 0)
 end
 ```
 
