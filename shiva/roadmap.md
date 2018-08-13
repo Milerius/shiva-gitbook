@@ -2,7 +2,7 @@
 
 ## Global Todo
 
-* [ ] [SFML module](roadmap.md#sfml-module)
+* [ ] [SFML module](roadmap.md#sfml-module) \(Working on it\)
 * [ ] SDL module
 * [ ] [Liblapin module](roadmap.md#liblapin-module)
 * [ ] Allegro5 module
