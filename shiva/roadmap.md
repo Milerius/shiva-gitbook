@@ -2,8 +2,9 @@
 
 ## Global Todo
 
-* [ ] SFML module
+* [ ] [SFML module](roadmap.md#sfml-module)
 * [ ] SDL module
+* [ ] Liblapin module
 * [ ] Compatibility with EMSCRIPTEN \(with sdl2 for example\)
 * [ ] Ogre3d module
 * [ ] bgfx 2d module
@@ -39,4 +40,12 @@
 * [ ] Mouse
 * [ ] Joysticks
 * [ ] Touchpad
+
+## Liblapin Module
+
+* [ ] graphical plugin
+* [ ] animation plugin
+* [ ] audio plugin
+* [ ] video plugin
+* [ ] resource plugin
 
