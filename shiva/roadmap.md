@@ -11,6 +11,7 @@
 * [ ] bgfx 2d module
 * [ ] bgfx 3d module
 * [ ] box2d module
+* [ ] bullet3d module
 * [ ] imgui module
 * [ ] editor with IMGUI
 * [x] [ecs module](modules/shiva-ecs.md)
