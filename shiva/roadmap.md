@@ -5,6 +5,7 @@
 * [ ] [SFML module](roadmap.md#sfml-module)
 * [ ] SDL module
 * [ ] [Liblapin module](roadmap.md#liblapin-module)
+* [ ] Allegro5 module
 * [ ] Compatibility with EMSCRIPTEN \(with sdl2 for example\)
 * [ ] Ogre3d module
 * [ ] bgfx 2d module
@@ -31,6 +32,8 @@
 * [ ] Input Module
 * [ ] Write a Facebook API in lua
 * [ ] Write a Steam API in lua
+* [ ] Network Module
+* [ ] CLI Tooling for project management
 
 ## SFML Module
 
@@ -54,4 +57,11 @@
 * [ ] audio plugin
 * [ ] video plugin
 * [ ] resource plugin
+
+## CLI Tooling for project management
+
+* [x] Add prologue
+* [ ] Add build scripts
+* [ ] Add more game\_templates
+* [ ] Improve the code
 
