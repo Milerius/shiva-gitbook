@@ -13,7 +13,7 @@
 | [shiva.entity\_registry:create](lua.md#shiva-entity_registry-create) | create an entity. |
 | [shiva.entity\_registry:destroy](lua.md#shiva-entity_registry-destroy) | destroy an entity |
 | [shiva.entity\_registry:nb\_entities](lua.md#shiva-entity_registry-nb_entities) | get the numbers of entities |
-| shiva.entity\_registry:has\_\[component\_name\]\_component | checks whether the requested component is associated with the given entity |
+| [shiva.entity\_registry:has\_\[component\_name\]\_component](lua.md#shiva-entityregistry-has_-component_name-_component) | checks whether the requested component is associated with the given entity |
 |  |  |
 
 ## Events API Documentation

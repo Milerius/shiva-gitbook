@@ -2,6 +2,9 @@
 
 * [Shiva Documentation](README.md)
 * [Shiva](shiva/README.md)
+  * [Changelog](shiva/release-notes.md)
+  * [FAQ](shiva/faq.md)
+  * [Gallery](shiva/gallery.md)
   * [Installation](shiva/installation.md)
   * [Modules](shiva/modules/README.md)
     * [shiva::dll](shiva/modules/shiva-dll.md)
@@ -28,6 +31,7 @@
     * [shiva::stacktrace](shiva/modules/shiva-stacktrace.md)
     * [shiva::timer](shiva/modules/shiva-timer.md)
     * [shiva::world](shiva/modules/shiva-world.md)
+  * [Roadmap](shiva/roadmap.md)
   * [Scripting](shiva/scripting/README.md)
     * [Lua](shiva/scripting/lua.md)
     * [Python](shiva/scripting/python.md)
@@ -36,5 +40,4 @@
     * [How to create/build/install a system plugin](shiva/tutorial/how-to-create-a-system-plugin.md)
     * [How to create a scripted system](shiva/tutorial/how-to-create-a-scripted-system.md)
     * [How to create a project through the CLI tools and build it](shiva/tutorial/how-to-create-a-project-through-the-cli-tools-and-build-it.md)
-  * [Changelog](shiva/release-notes.md)
 
