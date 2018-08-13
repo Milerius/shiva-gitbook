@@ -6,6 +6,10 @@
 * [ ] SDL module
 * [ ] Compatibility with EMSCRIPTEN \(with sdl2 for example\)
 * [ ] Ogre3d module
+* [ ] bgfx 2d module
+* [ ] bgfx 3d module
+* [ ] box2d module
+* [ ] imgui module
 * [ ] editor with IMGUI
 * [x] ecs module
 * [x] static reflection module
@@ -23,11 +27,11 @@
 
 ## SFML Module
 
-* [ ] graphical plugin
-* [ ] animation plugin
+* [x] graphical plugin \(not finish yet but usable\)
+* [x] animation plugin \(not finish yet but usable\)
 * [ ] audio plugin
 * [ ] video plugin
-* [x] resources plugin
+* [x] resources plugin \(usable, improvable\)
 
 ## Input Module
 
