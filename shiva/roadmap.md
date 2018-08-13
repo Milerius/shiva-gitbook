@@ -4,7 +4,7 @@
 
 * [ ] [SFML module](roadmap.md#sfml-module)
 * [ ] SDL module
-* [ ] Liblapin module
+* [ ] [Liblapin module](roadmap.md#liblapin-module)
 * [ ] Compatibility with EMSCRIPTEN \(with sdl2 for example\)
 * [ ] Ogre3d module
 * [ ] bgfx 2d module
