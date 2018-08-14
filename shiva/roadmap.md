@@ -42,6 +42,7 @@
 * [x] animation plugin \(not finish yet but usable\)
 * [ ] audio plugin
 * [ ] video plugin
+* [ ] serialize/deserialize/save plugin
 * [x] resources plugin \(usable, improvable\)
 
 ## Input Module
