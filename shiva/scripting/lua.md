@@ -266,6 +266,10 @@ shiva.entity_registry:add_layer_1_component(entity_id);
 
 **Return value**
 
+| Possible name | Description |
+| :--- | :--- |
+| _**component**_ | `Component &` |
+
 **Example**
 
 ```lua
