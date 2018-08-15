@@ -15,6 +15,7 @@
     * [shiva::event](shiva/modules/shiva-event.md)
     * [shiva::filesystem](shiva/modules/shiva-filesystem.md)
     * [shiva::input](shiva/modules/shiva-input.md)
+    * [shiva::json](shiva/modules/shiva-json.md)
     * [shiva::lua](shiva/modules/shiva-lua.md)
     * [shiva::meta](shiva/modules/shiva-meta.md)
     * [shiva::pp](shiva/modules/shiva-pp.md)
