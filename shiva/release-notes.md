@@ -1,5 +1,25 @@
 # Changelog
 
+## Shiva 1.0
+
+### Updated
+
+* Documentation
+* Tooling \(CLI\)
+* SFML Module
+* Clean the code
+* VCPKG port
+
+### Fixed
+
+* A bug with the triggering of events in lua
+
+### Added
+
+* [Roadmap](roadmap.md)
+* new [Tutorials](tutorial/)
+* [FAQ](faq.md)
+
 ## Shiva 0.9
 
 ### Updated
