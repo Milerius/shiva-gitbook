@@ -75,3 +75,22 @@ To install vcpkg follow the instructions on the following github:
 
 `git submodule add` [`https://github.com/milerius/shiva`](https://github.com/milerius/shiva)
 
+### Dependancies
+
+If you decide to use shiva without going through VCPKG, you must install the following dependencies
+
+```text
+boost-stacktrace
+boost-filesystem
+boost-dll
+entt
+lua
+luafilesystem
+sol2
+pybind11
+spdlog
+
+##plugin
+sfml 2.5.0 (minimum)
+```
+
