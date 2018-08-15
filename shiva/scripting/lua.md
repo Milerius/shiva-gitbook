@@ -15,6 +15,8 @@
 | [shiva.entity\_registry:nb\_entities](lua.md#shiva-entity_registry-nb_entities) | get the numbers of entities |
 | [shiva.entity\_registry:has\_\[component\_name\]\_component](lua.md#shiva-entityregistry-has_-component_name-_component) | checks whether the requested component is associated with the given entity |
 | [shiva.entity\_registry:get\_\[component\_name\]\_component](lua.md#shiva-entity_registry-get_-component_name-_component) | get the component linked to the given entity |
+| [shiva.entity\_registry:remove\_\[component\_name\]\_component](lua.md#shiva-entity_registry-remove_-component_name-_component) | remove the component linked to the given entity |
+| [shiva.entity\_registry:add\_\[component\_name\]\_component](lua.md#shiva-entity_registry-add_-component_name-_component) | add the component to the given entity |
 
 ## Events API Documentation
 
@@ -164,7 +166,7 @@ function foo()
 end
 ```
 
-### shiva.entity\_registry.get\_\[component\_name\]\_component
+### shiva.entity\_registry:get\_\[component\_name\]\_component
 
 This function takes an entity as a parameter and retrieves the component associated with it through the EnTT registry.
 
@@ -204,4 +206,46 @@ function foo()
     assert(shiva.entity_registry:has_layer_1_component(entity_id) == false, "should be false")
 end
 ```
+
+### shiva.entity\_registry:remove\_\[component\_name\]\_component
+
+This function takes an entity as a parameter and remove the component associated with it through the EnTT registry.
+
+{% hint style="info" %}
+All those functions are automatically generated based on the common components.
+{% endhint %}
+
+```lua
+-- Global signature
+shiva.entity_registry:remove_[component_name]_component(entity_id);
+
+-- Example of generated one
+shiva.entity_registry:remove_layer_1_component(entity_id);
+```
+
+**Parameters**
+
+**Example**
+
+### shiva.entity\_registry:add\_\[component\_name\]\_component
+
+This function takes an entity as a parameter and add the component through the EnTT registry, and return a reference to the component.
+
+{% hint style="info" %}
+All those functions are automatically generated based on the common components.
+{% endhint %}
+
+```lua
+-- Global signature
+shiva.entity_registry:add_[component_name]_component(entity_id);
+
+-- Example of generated one
+shiva.entity_registry:add_layer_1_component(entity_id);
+```
+
+**Parameters**
+
+**Return value**
+
+**Example**
 
