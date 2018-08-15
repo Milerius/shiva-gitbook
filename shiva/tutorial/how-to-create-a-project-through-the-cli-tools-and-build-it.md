@@ -71,3 +71,7 @@ You should see a window appear, you can leave with escape
 
 ![](../../.gitbook/assets/capture-de-cran-2018-08-15-a-07.33.00.png)
 
+{% hint style="warning" %}
+This entire tutorial used the **sfml** rendering module, but when other module will be available you can replace **sfml** with what you want, **Ogre**, **SDL2**, **Vulkan**, **bgfx**
+{% endhint %}
+
