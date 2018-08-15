@@ -13,7 +13,7 @@
 * [ ] box2d module
 * [ ] bullet3d module
 * [ ] imgui module
-* [ ] JSON helper module \(nlohmann Json\)
+* [x] JSON helper module \(nlohmann Json\)
 * [ ] XML helper module \(pugi\)
 * [ ] Yaml helper module
 * [ ] INI helper module
