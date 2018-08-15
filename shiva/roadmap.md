@@ -13,6 +13,10 @@
 * [ ] box2d module
 * [ ] bullet3d module
 * [ ] imgui module
+* [ ] JSON helper module \(nlohmann Json\)
+* [ ] XML helper module \(pugi\)
+* [ ] Yaml helper module
+* [ ] INI helper module
 * [ ] editor with IMGUI
 * [x] [ecs module](modules/shiva-ecs.md)
 * [x] [static reflection module](modules/shiva-reflection.md)
