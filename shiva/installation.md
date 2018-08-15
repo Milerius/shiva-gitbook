@@ -87,9 +87,9 @@ entt
 lua
 luafilesystem
 sol2
+nlohmann-json
 pybind11
 spdlog
-
 ##plugin
 sfml 2.5.0 (minimum)
 ```
