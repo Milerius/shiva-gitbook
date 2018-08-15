@@ -33,7 +33,9 @@ function update_systems_type(system_type)
 function update_systems() 
 {
   call update_systems_type(pre_logic);
-  call update_systems_type(logic);
+  while (frame_rate) {
+    call update_systems_type(logic);
+  }
   call update_systems_type(post_logic);
   return nb_systems_updated
 }
