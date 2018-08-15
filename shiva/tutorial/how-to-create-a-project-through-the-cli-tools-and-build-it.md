@@ -60,3 +60,14 @@ cmake -DCMAKE_TOOLCHAIN_FILE=$VCPKG_ROOT/vcpkg/scripts/buildsystems/vcpkg.cmake 
 make
 ```
 
+### Run the binary
+
+```bash
+cd bin 
+./bomberman
+```
+
+You should see a window appear, you can leave with escape
+
+![](../../.gitbook/assets/capture-de-cran-2018-08-15-a-07.33.00.png)
+
