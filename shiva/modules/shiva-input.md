@@ -1,5 +1,9 @@
 # shiva::input
 
+{% hint style="warning" %}
+To understand the enum on this page you should read this [module](shiva-enums.md).
+{% endhint %}
+
 ## Keyboard
 
 Based on the sfml keycode there is the enum for **shiva::input::keyboard**
