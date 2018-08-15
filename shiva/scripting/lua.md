@@ -227,6 +227,17 @@ shiva.entity_registry:remove_layer_1_component(entity_id);
 
 **Example**
 
+```lua
+function foo()
+    local entity_id = shiva.entity_registry:create()
+    local component = shiva.entity_registry:add_layer_1_component(entity_id)
+    local same_component = shiva.entity_registry:get_layer_1_component(entity_id)
+    assert(shiva.entity_registry:has_layer_1_component(entity_id) == true, "should be true")
+    shiva.entity_registry:remove_layer_1_component(entity_id)
+    assert(shiva.entity_registry:has_layer_1_component(entity_id) == false, "should be false")
+end
+```
+
 ### shiva.entity\_registry:add\_\[component\_name\]\_component
 
 This function takes an entity as a parameter and add the component through the EnTT registry, and return a reference to the component.
@@ -248,4 +259,15 @@ shiva.entity_registry:add_layer_1_component(entity_id);
 **Return value**
 
 **Example**
+
+```lua
+function foo()
+    local entity_id = shiva.entity_registry:create()
+    local component = shiva.entity_registry:add_layer_1_component(entity_id)
+    local same_component = shiva.entity_registry:get_layer_1_component(entity_id)
+    assert(shiva.entity_registry:has_layer_1_component(entity_id) == true, "should be true")
+    shiva.entity_registry:remove_layer_1_component(entity_id)
+    assert(shiva.entity_registry:has_layer_1_component(entity_id) == false, "should be false")
+end
+```
 
