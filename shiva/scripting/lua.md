@@ -225,6 +225,10 @@ shiva.entity_registry:remove_layer_1_component(entity_id);
 
 **Parameters**
 
+| Name | Description |
+| :--- | :--- |
+| _**entity\_id**_ | `integer` |
+
 **Example**
 
 ```lua
@@ -255,6 +259,10 @@ shiva.entity_registry:add_layer_1_component(entity_id);
 ```
 
 **Parameters**
+
+| Name | Description |
+| :--- | :--- |
+| _**entity\_id**_ | `integer` |
 
 **Return value**
 
