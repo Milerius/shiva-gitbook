@@ -166,7 +166,7 @@ end
 
 ### shiva.entity\_registry.get\_\[component\_name\]\_component
 
-This function takes an entity as a parameter and retrieves the component associated with it.
+This function takes an entity as a parameter and retrieves the component associated with it through the EnTT registry.
 
 {% hint style="info" %}
 All those functions are automatically generated based on the common components.
