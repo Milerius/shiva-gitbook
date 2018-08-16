@@ -10,7 +10,7 @@
 * [ ] Ogre3d module
 * [ ] bgfx 2d module
 * [ ] bgfx 3d module
-* [ ] box2d module
+* [ ] box2d module \(Working on it\)
 * [ ] bullet3d module
 * [ ] imgui module
 * [x] JSON helper module \(nlohmann Json\)
@@ -45,7 +45,7 @@
 * [x] graphical plugin \(not finish yet but usable\)
 * [x] animation plugin \(not finish yet but usable\)
 * [ ] audio plugin
-* [ ] video plugin
+* [ ] video plugin \(sfeMovie\)
 * [ ] serialize/deserialize/save plugin
 * [x] resources plugin \(usable, improvable\)
 
@@ -70,4 +70,9 @@
 * [ ] Add build scripts
 * [ ] Add more game\_templates
 * [ ] Improve the code
+
+## Box2D Module
+
+* [ ] json configuration
+* [x] contact listener
 
