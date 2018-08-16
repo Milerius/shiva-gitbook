@@ -13,6 +13,7 @@
 * [ ] box2d module \(Working on it\)
 * [ ] bullet3d module
 * [ ] imgui module
+* [ ] SQL storage / Database management for specific games
 * [x] JSON helper module \(nlohmann Json\)
 * [ ] XML helper module \(pugi\)
 * [ ] Yaml helper module
@@ -39,6 +40,8 @@
 * [ ] Write a Steam API in lua
 * [ ] Network Module
 * [ ] CLI Tooling for project management
+* [ ] Write more tutorials
+* [ ] Write an emulator with shiva
 
 ## SFML Module
 
