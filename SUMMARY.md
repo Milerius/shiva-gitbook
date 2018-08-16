@@ -7,6 +7,7 @@
   * [Gallery](shiva/gallery.md)
   * [Installation](shiva/installation.md)
   * [Modules](shiva/modules/README.md)
+    * [shiva::box2d](shiva/modules/shiva-box2d.md)
     * [shiva::dll](shiva/modules/shiva-dll.md)
     * [shiva::ecs](shiva/modules/shiva-ecs.md)
     * [shiva::entt](shiva/modules/shiva-entt.md)
